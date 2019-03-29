@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Годунова](https://up.htmlacademy.ru/adaptive/16/user/778805).
-* Наставник: `Неизвестно`.
+* Наставник: [Влад Башилов](https://htmlacademy.ru/profile/id167603).
 
 ---
 
