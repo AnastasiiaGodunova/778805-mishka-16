@@ -20,54 +20,78 @@
         <a class="promo__button promo__button--lamp" href="#">Предметы интерьера</a>
         <a class="promo__button promo__button--lego" href="#">Детские игрушки</a>
       </section>
-      <section class="best-product">
+      <section class="hit">
         <h2 class="visually-hidden">Товар недели</h2>
-        <div class="best-product__item">
-          <h3 class="best-product__item--title">Вязаные корзинки</h3>
-          <span class="best-product__of-week">Товар недели</span>
-          <p class="best-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="best-product__table">
+          <h3 class="hit__title">Вязаные корзинки</h3>
+          <span class="hit__text">Товар недели</span>
+          <p class="hit__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="hit__table">
             <tr>
-              <td class="best-product__characteristics">Цвет:</td>
-              <td class="best-product__characteristics">«Тиффани»/серый</td>
+              <td class="hit__cell">Цвет:</td>
+              <td class="hit__cell">«Тиффани»/серый</td>
             </tr>
             <tr>
-              <td class="best-product__characteristics">Диаметр:</td>
-              <td class="best-product__characteristics">25 см</td>
+              <td class="hit__cell">Диаметр:</td>
+              <td class="hit__cell">25 см</td>
             </tr>
             <tr>
-              <td class="best-product__characteristics">Высота:</td>
-              <td class="best-product__characteristics">15 см</td>
+              <td class="hit__cell">Высота:</td>
+              <td class="hit__cell">15 см</td>
             </tr>
           </table>
-          <img class="best-product__image" src="http://placehold.it/260x315" width="260" height="315" alt="Товар недели">
-          <p class="best-product__cost">Цена 990 руб.</p>
-          <a class="best-product__order button" href="#">Заказать</a>
+          <img class="hit__image" src="http://placehold.it/260x315" width="260" height="315" alt="Товар недели">
+          <p class="hit__cost">Цена 990 руб.</p>
+          <a class="hit__order button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="about-us">
-        <h2 class="about-us__title">Коротко о нас:</h2>
-        <ul class="about-us__list">
-          <li class="about-us__item about-us__item--flower">Экологияески чистые материалы</li>
-          <li class="about-us__item about-us__item--money">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--ball">Связано вручную с любовью и умилением</li>
-          <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--gift">Поставляется в подарочной упаковке</li>
+      <section class="aboutUs">
+        <h2 class="aboutUs__title">Коротко о нас:</h2>
+        <ul class="aboutUs__list">
+          <li class="aboutUs__item aboutUs__item--flower">Экологияески чистые материалы</li>
+          <li class="aboutUs__item aboutUs__item--money">Скандинавский стиль по российской цене</li>
+          <li class="aboutUs__item aboutUs__item--heart">Увеличивает лайки на фотографиях</li>
+          <li class="aboutUs__item aboutUs__item--ball">Связано вручную с любовью и умилением</li>
+          <li class="aboutUs__item aboutUs__item--rocket">Поддержка отечественного производителя</li>
+          <li class="aboutUs__item aboutUs__item--gift">Поставляется в подарочной упаковке</li>
         </ul>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+        <blockquote class="reviews__item">
+          <q class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</q>
+          <cite class="reviews__author">Анастасия Красильникова <span class="reviews__author--nickname">@misssssiskras</span></cite>
+        </blockquote>
+        <button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+        <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+        <a class="reviews__write button" href="#">Написать</a>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span>e-mail:</span>
+            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </li>
+          <li class="contacts__item">
+            <span>адрес:</span>
+            <address>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</address>
+          </li>
+        </ul>
+        <img class="contacts__map-image" src="http://placehold.it/320x460" width="320" height="460" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <a class="contacts__write button" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__social social">
         <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+              <a class="social__item-link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+              <a class="social__item-link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+              <a class="social__item-link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
           </ul>
       </div>
