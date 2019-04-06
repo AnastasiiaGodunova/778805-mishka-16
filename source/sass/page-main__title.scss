@@ -1,0 +1,9 @@
+.page-main__title {
+  margin: 0;
+  padding: 75px 0;
+
+  @include text-size(27px);
+  text-align: center;
+
+  background-color: $grey-back;
+}

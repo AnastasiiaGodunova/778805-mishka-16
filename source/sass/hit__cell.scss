@@ -1,0 +1,5 @@
+.hit__cell {
+  @include text-size(15px, 20px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}

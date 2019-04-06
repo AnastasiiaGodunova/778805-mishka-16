@@ -1,0 +1,8 @@
+.video__text {
+  margin: 0;
+  padding-top: 34px;
+
+  @include text-size(13px, 24px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}

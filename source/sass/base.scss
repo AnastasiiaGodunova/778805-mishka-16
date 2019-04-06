@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+
+  font-weight: 700;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #000;
+
+  background-color: #fff;
+}
+
+@mixin text-size($font-size: 25px, $line-height: 30px) {
+  font-size: $font-size;
+  line-height: $line-height;
+}

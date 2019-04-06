@@ -1,0 +1,5 @@
+.order__fieldset-name {
+  @include text-size(17px, 16px);
+  color: $primary-color;
+  text-transform: uppercase;
+}

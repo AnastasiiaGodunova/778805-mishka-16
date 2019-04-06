@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Мишка</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/95x40" width="95" height="40" alt="Логотип «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
     <main class="page-main">
@@ -102,20 +105,20 @@
       <div class="page-footer__social social">
         <ul class="social__list">
             <li class="social__item">
-              <a class="social__item-link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
             <li class="social__item">
-              <a class="social__item-link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__item-link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
           </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="http://placehold.it/35x40" width="35" height="40" alt="Логотип «HTML Academy»">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип «HTML Academy»">
         </a>
       </div>
     </footer>
