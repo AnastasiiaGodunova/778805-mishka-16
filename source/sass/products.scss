@@ -13,6 +13,25 @@
   padding-top: $indent;
 }
 
+.products__item-image {
+  display: block;
+}
+
+.products__item-description {
+  padding: $indent;
+  width: 260px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ececec;
+}
+
+.products__item-title {
+  @include text-size(17px, 24px);
+  color: #000;
+  text-decoration: none;
+}
+
 .products__item-text {
   margin: 0;
   padding-top: 17px;
@@ -23,21 +42,6 @@
   color: $greyish-brown;
 }
 
-.products__item-title {
-  @include text-size(17px, 24px);
-  color: #000;
-  text-decoration: none;
-}
-
 .products__item-cost {
   @include text-size(15px, 24px);
-}
-
-.products__item-description {
-  padding: $indent;
-  width: 260px;
-
-  box-sizing: border-box;
-
-  border: 1px solid #ececec;
 }
