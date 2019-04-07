@@ -1,0 +1,23 @@
+.order {
+  padding: 0 $indent;
+}
+
+.order__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.order__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.order__fieldset-name {
+  @include text-size(17px, 16px);
+  color: $primary-color;
+  text-transform: uppercase;
+}

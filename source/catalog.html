@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Мишка</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/95x40" width="95" height="40" alt="Логотип «Мишка»">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
     </header>
     <main class="page-main">
@@ -19,29 +22,35 @@
         <ul class="products__list">
           <li class="products__item">
             <a href="#">
-              <img class="products__item-image" src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+              <img class="products__item-image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
             </a>
-            <a class="products__item-title" href="#">Зайчик-попрыгайчик</a>
-            <p class="products__item-description">Рост 30 см, вес 200 г</p>
-            <span class="products__item-cost">1 200 руб.</span>
+            <div class="products__item-description">
+              <a class="products__item-title" href="#">Зайчик-попрыгайчик</a>
+              <p class="products__item-text">Рост 30 см, вес 200 г</p>
+              <span class="products__item-cost">1 200 руб.</span>
+            </div>
             <a class="products__item-link" href="#"><span class="visually-hidden">Купить</span></a>
           </li>
           <li class="products__item">
             <a href="#">
-              <img class="products__item-image" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+              <img class="products__item-image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
             </a>
-            <a class="products__item-title" href="#">Корзинка для белья</a>
-            <p class="products__item-description">Диаметр 15 см, высота 10 см</p>
-            <span class="products__item-cost">690 руб.</span>
+            <div class="products__item-description">
+              <a class="products__item-title" href="#">Корзинка для белья</a>
+              <p class="products__item-text">Диаметр 15 см, высота 10 см</p>
+              <span class="products__item-cost">690 руб.</span>
+            </div>
             <a class="products__item-link" href="#"><span class="visually-hidden">Купить</span></a>
           </li>
           <li class="products__item">
             <a href="#">
-              <img class="products__item-image" src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+              <img class="products__item-image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
             </a>
-            <a class="products__item-title" href="#">Большая корзинка для игрушек</a>
-            <p class="products__item-description">Диаметр 30 см, высота 30 см</p>
-            <span class="products__item-cost">1 500 руб.</span>
+            <div class="products__item-description">
+              <a class="products__item-title" href="#">Большая корзинка для игрушек</a>
+              <p class="products__item-text">Диаметр 30 см, высота 30 см</p>
+              <span class="products__item-cost">1 500 руб.</span>
+            </div>
             <a class="products__item-link" href="#"><span class="visually-hidden">Купить</span></a>
           </li>
         </ul>
@@ -50,27 +59,27 @@
         <h2 class="video__title">Процесс производства</h2>
         <div class="video__player"></div>
         <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="video__button button" href="#">Сделать заказ</a>
+        <a class="button button--video" href="#">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__social social">
         <ul class="social__list">
             <li class="social__item">
-              <a class="social__item-link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
             <li class="social__item">
-              <a class="social__item-link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__item-link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
           </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="http://placehold.it/35x40" width="35" height="40" alt="Логотип «HTML Academy»">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип «HTML Academy»">
         </a>
       </div>
     </footer>
