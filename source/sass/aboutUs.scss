@@ -1,3 +1,15 @@
 .aboutUs {
   padding-left: $indent;
 }
+
+.aboutUs__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  @include text-size(17px, 20px);
+}
+
+.aboutUs__item {
+  padding: 20px 0;
+}

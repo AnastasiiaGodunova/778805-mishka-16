@@ -1,3 +1,42 @@
 .hit {
   padding-left: $indent;
 }
+
+.hit__title {
+  @include text-size(25px, 30px);
+}
+
+
+.hit__text {
+  @include text-size(17px, 20px);
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.hit__image {
+  padding-top: 28px;
+}
+
+.hit__cell {
+  @include text-size(15px, 20px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+.hit__cost {
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+
+  @include text-size(17px, 24px);
+  color: $greyish-brown;
+  text-align: center;
+}
+
+.hit__description {
+  width: 249px;
+
+  @include text-size(15px, 24px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}

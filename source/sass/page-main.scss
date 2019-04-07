@@ -1,0 +1,18 @@
+.page-main__title {
+  margin: 0;
+  padding: 75px 0;
+
+  @include text-size(27px);
+  text-align: center;
+
+  background-color: $grey-back;
+}
+
+.page-main__text {
+  margin: 0;
+  padding: $indent;
+
+  @include text-size(13px, 24px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}

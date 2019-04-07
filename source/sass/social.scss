@@ -1,3 +1,13 @@
+.social__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+
+  list-style: none;
+}
+
 .social__link {
   width: 23px;
   height: 40px;
@@ -20,4 +30,3 @@
     background-image: url("../img/icon-twitter.svg");
   }
 }
-
