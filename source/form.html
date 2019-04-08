@@ -73,24 +73,32 @@
             </ul>
           </fieldset>
           <fieldset class="order__fieldset">
-            <legend class="order__fieldset-name">ФИО</legend>
-            <label class="order__label">Имя:
-              <input type="text" name="name" placeholder="Введите ваше имя*" required>
-            </label>
-            <label class="order__label">Фамилия:
-              <input type="text" name="surname" placeholder="Укажите фимилию*" required>
-            </label>
-            <label class="order__label">Отчество:
-              <input type="text" name="patronymic" placeholder="Отчество, если желаете">
-            </label>
+            <legend class="order__fieldset-name order__fieldset-name--group">ФИО</legend>
+            <ul class="order__group-list">
+              <li class="order__input-item">
+                <label class="order__label">Имя:
+                  <input class="order__input" type="text" name="name" placeholder="Введите ваше имя*" required>
+                </label>
+              </li>
+              <li class="order__input-item">
+                <label class="order__label">Фамилия:
+                  <input class="order__input" type="text" name="surname" placeholder="Укажите фимилию*" required>
+                </label>
+              </li>
+              <li class="order__input-item">
+                <label class="order__label">Отчество:
+                  <input class="order__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="order__fieldset">
-            <legend class="order__fieldset-name">ТЕЛ</legend>
-            <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
+            <legend class="order__fieldset-name order__fieldset-name--contacts">ТЕЛ</legend>
+            <input class="order__input" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
           </fieldset>
           <fieldset class="order__fieldset">
-            <legend class="order__fieldset-name">E-Mail</legend>
-            <input type="email" name="email" placeholder="Ваш Email*" required>
+            <legend class="order__fieldset-name order__fieldset-name--contacts">E-Mail</legend>
+            <input class="order__input" type="email" name="email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="order__fieldset">
             <legend class="order__fieldset-name">Доп</legend>

@@ -2,13 +2,6 @@
   padding: 0 $indent;
 }
 
-.order__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .order__fieldset {
   margin: 0;
   padding: 0;
@@ -17,7 +10,75 @@
 }
 
 .order__fieldset-name {
+  padding-top: $indent;
+
   @include text-size(17px, 16px);
   color: $primary-color;
   text-transform: uppercase;
+
+  &--group {
+    padding-bottom: 33px;
+  }
+
+  &--contacts {
+    padding-bottom: 9px;
+  }
+}
+
+.order__list {
+  margin: 0;
+  padding: 0;
+  padding-top: 35px;
+
+  list-style: none;
+}
+
+.order__list-item {
+  &--radio:not(:last-child) {
+    padding-bottom: 25px;
+  }
+
+  &--checkbox:not(:last-child) {
+    padding-bottom: 46px;
+  }
+}
+
+.order__group-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.order__input-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.order__input {
+  box-sizing: border-box;
+
+  width: 260px;
+  height: 52px;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.order__comment {
+  box-sizing: border-box;
+
+  margin-top: 23px;
+  padding: 17px;
+  width: 260px;
+}
+
+.order__text {
+  @include text-size(14px, 16px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+.order__button {
+  @include text-size(17px, 16px);
+  font-weight: bold;
 }

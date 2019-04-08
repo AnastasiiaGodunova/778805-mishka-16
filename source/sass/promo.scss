@@ -25,12 +25,12 @@
   padding-left: 29px;
 
   @include text-size(19px, 24px);
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 
   background-color: $primary-color;
 
   &--lego {
-  background-color: #56c3b2;
+    background-color: #56c3b2;
   }
 }

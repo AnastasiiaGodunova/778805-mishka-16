@@ -1,3 +1,30 @@
 .reviews {
   padding-left: $indent;
 }
+
+.reviews__item {
+  margin: 0;
+  padding-top: 35px;
+}
+
+.reviews__text {
+  @include text-size(15px);
+  font-weight: $weight;
+  color: $greyish-brown;
+  quotes: none;
+}
+
+.reviews__author {
+  display: block;
+
+  padding-top: 40px;
+
+  @include text-size(17px, 24px);
+  font-style: normal;
+
+  &--nickname {
+    font-weight: $weight;
+    line-height: 30px;
+    color: $greyish-brown;
+  }
+}
