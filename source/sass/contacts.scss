@@ -1,0 +1,48 @@
+.contacts__wrapper {
+
+  padding-left: $indent;
+}
+
+.contacts__title {
+  margin: 0;
+  padding-top: 44px;
+
+  @include text-size(18px);
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  padding-top: 42px;
+
+  list-style: none;
+}
+
+.contacts__item {
+  display: flex;
+
+  @include text-size(15px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+.contacts__name {
+  padding-right: 32px;
+}
+
+.contacts__link {
+  color: $greyish-brown;
+  text-decoration-color: $primary-color;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__map-image {
+  padding-top: 42px;
+}
+
+.contacts__write {
+  margin-top: 39px;
+}

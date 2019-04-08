@@ -4,10 +4,10 @@ body {
   width: 320px;
 
   font-weight: 700;
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #000;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #000000;
 
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 @mixin text-size($font-size: 25px, $line-height: 30px) {
@@ -25,7 +25,6 @@ body {
 
   border: 0;
 
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;

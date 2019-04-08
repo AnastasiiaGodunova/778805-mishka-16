@@ -11,6 +11,11 @@
   @include text-size(17px, 24px);
 }
 
+.video__player {
+  margin: 0 -35px;
+  padding-top: 26px;
+}
+
 .video__text {
   margin: 0;
   padding-top: 34px;

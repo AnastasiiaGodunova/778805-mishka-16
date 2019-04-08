@@ -1,6 +1,6 @@
 .button {
   margin-top: 28px;
-  padding: 20px 0px;
+  padding: 20px 0;
   width: 260px;
   display: inline-block;
   box-sizing: border-box;
@@ -16,6 +16,6 @@
   cursor: pointer;
 
   &--video {
-  width: 192px;
+    width: 192px;
   }
 }
