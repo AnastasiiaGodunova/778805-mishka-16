@@ -1,9 +1,134 @@
 .page-header {
-  display: flex;
+  margin: 0 auto;
+  min-width: 320px;
+}
 
-  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+.main-nav {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.main-nav__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  box-shadow: 0 1px 0 0 $grey, inset 0 1px 0 0 $grey;
 }
 
 .page-header__logo {
-  margin: 22px 0 22px 116px;
+  padding: 22px 67px;
+}
+
+.main-nav__toggle {
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 50%;
+  border: none;
+
+  cursor: pointer;
+}
+.main-nav__list {
+  @include clear-list();
+}
+
+.main-nav__item {
+  padding: $indent 0;
+  padding-left: 77px;
+
+  box-shadow: 0 1px 0 0 $grey, inset 0 1px 0 0 $grey;
+}
+
+.main-nav__link {
+  @include text-size(17px, 24px);
+  color: $black;
+  text-decoration: none;
+
+  &--add-nav {
+    @include text-size(15px, 24px);
+  }
+}
+
+.main-nav__text {
+  margin: 0;
+  padding: 24px 0;
+
+  @include text-size(15px, 24px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    flex-direction: row;
+
+    padding-left: 51px;
+
+    box-sizing: border-box;
+
+    background-color: transparent;
+  }
+  .main-nav__top {
+    position: absolute;
+
+    justify-content: flex-start;
+  }
+  .page-header__logo {
+    padding-left: 0;
+  }
+  .main-nav__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--user-nav {
+      justify-content: flex-end;
+      order: -1;
+
+      width: 100%;
+    }
+  }
+  .main-nav__item {
+    box-shadow: none;
+
+    padding-left: 37px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    max-width: 1150px;
+  }
+  .main-nav__top {
+    justify-content: center;
+  }
+  .main-nav__list--site-nav {
+    order: -2;
+  }
+  .main-nav__list--user-nav {
+    width: 50%;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -9,25 +10,40 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
-          </li>
-          <li class="main-nav__item main-nav__item--search">
-            <a href="#" class="main-nav__link">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="main-nav__top">
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <div class="main-nav__bottom">
+        <ul class="main-nav__list main-nav__list--site-nav">
+            <li class="main-nav__item">
+              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--user-nav">
+            <li class="main-nav__item main-nav__item--search">
+              <a href="#" class="main-nav__link">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item main-nav__item--basket">
+              <a href="#" class="main-nav__link">Корзина: пока пуста</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--add-nav">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link main-nav__link--add-nav">Новые поступления</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link main-nav__link--add-nav">Распродажа</a>
+            </li>
+          </ul>
+          <p class="main-nav__text">Бесплатная доставка по России</p>
+        </div>
       </nav>
     </header>
     <main class="page-main">

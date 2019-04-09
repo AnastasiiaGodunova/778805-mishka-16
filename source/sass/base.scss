@@ -1,18 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  width: 320px;
+  min-width: 320px;
 
   font-weight: 700;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: #000000;
+  color: $black;
 
-  background-color: #ffffff;
-}
-
-@mixin text-size($font-size: 25px, $line-height: 30px) {
-  font-size: $font-size;
-  line-height: $line-height;
+  background-color: $white;
 }
 
 .visually-hidden {
@@ -28,4 +23,15 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@mixin text-size($font-size: 25px, $line-height: 30px) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
