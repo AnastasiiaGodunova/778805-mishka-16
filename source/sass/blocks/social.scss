@@ -1,11 +1,10 @@
 .social__list {
   display: flex;
 
-  margin: 0;
-  padding: 0;
-  padding-top: 25px;
+  @include clear-list();
 
-  list-style: none;
+  padding-top: 25px;
+  padding-left: 20px;
 }
 
 .social__link {
@@ -28,5 +27,11 @@
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    padding-top: 25px;
   }
 }

@@ -1,0 +1,18 @@
+.title {
+  margin: 0;
+  padding-top: 34px;
+
+  @include text-size;
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    @include text-size(43px, 50px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    @include text-size(53px, 57px);
+  }
+}

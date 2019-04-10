@@ -26,11 +26,9 @@
 }
 
 .order__list {
-  margin: 0;
-  padding: 0;
-  padding-top: 35px;
+  @include clear-list();
 
-  list-style: none;
+  padding-top: 35px;
 }
 
 .order__list-item {
@@ -44,10 +42,7 @@
 }
 
 .order__group-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include clear-list();
 }
 
 .order__input-item:not(:last-child) {

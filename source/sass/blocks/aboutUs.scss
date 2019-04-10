@@ -1,0 +1,30 @@
+.aboutUs {
+  padding-left: $indent;
+}
+
+.aboutUs__list {
+  @include clear-list();
+
+  @include text-size(17px, 20px);
+}
+
+.aboutUs__item {
+  padding: 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .aboutUs {
+    padding: 0 52px;
+  }
+
+  .aboutUs__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .aboutUs__item {
+    width: 50%;
+
+    @include text-size(20px, 22px);
+  }
+}

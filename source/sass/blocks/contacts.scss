@@ -10,11 +10,9 @@
 }
 
 .contacts__list {
-  margin: 0;
-  padding: 0;
-  padding-top: 42px;
+  @include clear-list();
 
-  list-style: none;
+  padding-top: 42px;
 }
 
 .contacts__item {
