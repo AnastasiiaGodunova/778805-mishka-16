@@ -3,11 +3,16 @@
 }
 
 .products__list {
+  display: flex;
+  flex-direction: column;
+
   @include clear-list();
 }
 
 .products__item {
   padding-top: $indent;
+
+  width: 260px;
 }
 
 .products__item-image {
@@ -46,6 +51,9 @@
 @media (min-width: $tablet-width) {
   .products__item {
     display: flex;
+
+    width: auto;
+    height: 334px;
   }
 
   .products__item-description {
@@ -75,13 +83,15 @@
 
 @media (min-width: $desktop-width) {
   .products__list {
-    display: flex;
+    flex-direction: row;
   }
 
   .products__item {
     flex-direction: column;
 
     padding-right: 50px;
+    width: 316px;
+    height: auto;
   }
 
   .products__item-description {

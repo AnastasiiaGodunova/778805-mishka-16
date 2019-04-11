@@ -8,10 +8,6 @@
 .main-nav {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
   width: 100%;
 }
 
@@ -87,7 +83,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    flex-direction: row;
+
 
     padding-left: 51px;
 
@@ -141,9 +137,9 @@
   }
 
   .main-nav__item {
-    box-shadow: none;
-
     padding-left: 37px;
+
+    box-shadow: none;
 
     &:first-child {
       padding-left: 0;
@@ -161,7 +157,10 @@
   }
 
   .main-nav__top {
-    justify-content: center;
+    left: 50%;
+
+    width: 149px;
+    height: auto;
   }
 
   .page-header__logo-image {
