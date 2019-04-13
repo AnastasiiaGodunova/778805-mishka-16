@@ -4,7 +4,7 @@
   align-items: center;
 
   margin-top: 39px;
-  padding-bottom: 23px;
+  padding: 25px 30px 23px 30px;
 
   background-color: $grey-back;
 }
@@ -16,12 +16,18 @@
 .page-footer__copyright {
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  padding-top: 50px;
+  padding-top: 28px;
+  width: 100%;
+
+  border-top: 1px solid $grey;
 }
 
 .copyright__text {
   padding-right: $indent;
+
+  @include text-size(19px, 18px);
 }
 
 @media (min-width: $tablet-width) {
@@ -29,12 +35,17 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 0 50px 57px 50px;
+    padding: 50px $indent-tablet $indent $indent-tablet;
   }
 
   .page-footer__logo {
     display: block;
+  }
 
-    padding-top: 50px;
+  .page-footer__copyright {
+    padding: 0;
+    width: auto;
+
+    border: none;
   }
 }

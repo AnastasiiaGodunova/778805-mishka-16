@@ -1,10 +1,11 @@
 .button {
   margin-top: 28px;
-  padding: 20px 0;
+  padding: 14px 0;
   width: 260px;
   display: inline-block;
   box-sizing: border-box;
 
+  @include text-size(18px, 20px);
   color: $greyish-brown;
   text-decoration: none;
   text-transform: uppercase;
@@ -17,5 +18,40 @@
 
   &--video {
     width: 192px;
+
+    @include text-size(17px, 16px);
+  }
+}
+
+.button.reviews__write {
+  margin-top: 38px;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 17px;
+  }
+
+  .button--video {
+    width: 584px;
+
+    align-self: center;
+  }
+
+  .button.reviews__write {
+    order: -1;
+
+    width: 175px;
+    height: 52px;
+  }
+
+  .button.contacts__write {
+    width: 230px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--video {
+    width: 230px;
   }
 }

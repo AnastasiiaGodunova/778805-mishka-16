@@ -1,5 +1,5 @@
 .contacts__wrapper {
-  padding-left: $indent;
+  padding: 0 $indent;
 }
 
 .contacts__title {
@@ -17,6 +17,8 @@
 
 .contacts__item {
   display: flex;
+
+  padding-bottom: 13px;
 
   @include text-size(15px);
   font-weight: $weight;
@@ -37,9 +39,74 @@
 }
 
 .contacts__map-image {
-  padding-top: 42px;
+  padding-top: 29px;
 }
 
 .contacts__write {
   margin-top: 39px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    padding: 0 90px 0 $indent-tablet;
+
+    &--button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .contacts__title {
+    padding-top: 72px;
+
+    @include text-size(43px, 50px);
+  }
+
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 65px;
+  }
+
+  .contacts__item {
+    padding: 0;
+  }
+
+  .contacts__name {
+    padding-right: 26px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 175px;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+
+    padding-bottom: 32px;
+  }
+
+  .contacts__item {
+    padding-bottom: 13px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+
+    width: 525px;
+  }
+
+  .contacts__wrapper--button {
+    justify-content: flex-start;
+  }
 }

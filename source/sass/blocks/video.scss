@@ -24,3 +24,65 @@
   font-weight: $weight;
   color: $greyish-brown;
 }
+
+@media (min-width: $tablet-width) {
+  .video {
+    display: flex;
+    flex-direction: column;
+
+    margin: $indent-tablet;
+    padding: 0 42px 46px 42px;
+  }
+
+  .video__title {
+    padding-top: 43px;
+
+    font-size: 20px;
+  }
+
+  .video__player {
+    order: -1;
+    align-self: center;
+
+    padding: 0;
+    width: 668px;
+  }
+
+  .video__text {
+    @include text-size(15px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    position: relative;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 0;
+  }
+
+  .video__title {
+    margin-left: 682px;
+    padding-left: 57px;
+    width: 148px;
+  }
+
+  .video__player {
+    position: absolute;
+    top: 0;
+    left: 34px;
+
+    width: 682px;
+  }
+
+  .video__wrapper {
+    margin-left: 682px;
+    padding: 0 57px 60px 57px;
+  }
+
+  .video__text {
+    width: 222px;
+  }
+}

@@ -3,16 +3,17 @@
 
   @include clear-list();
 
-  padding-top: 25px;
-  padding-left: 20px;
+  padding-bottom: 28px;
+}
+
+.social__item {
+  padding: 0 20px;
 }
 
 .social__link {
   width: 23px;
   height: 40px;
   display: block;
-
-  margin-right: 40px;
 
   background-repeat: no-repeat;
   background-position: center;
