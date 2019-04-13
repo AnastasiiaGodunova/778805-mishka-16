@@ -1,19 +1,19 @@
 .social__list {
   display: flex;
 
-  margin: 0;
-  padding: 0;
-  padding-top: 25px;
+  @include clear-list();
 
-  list-style: none;
+  padding-bottom: 28px;
+}
+
+.social__item {
+  padding: 0 20px;
 }
 
 .social__link {
   width: 23px;
   height: 40px;
   display: block;
-
-  margin-right: 40px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -28,5 +28,11 @@
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    padding-top: 25px;
   }
 }

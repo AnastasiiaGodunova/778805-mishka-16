@@ -1,0 +1,146 @@
+.hit {
+  padding: 0 $indent 36px $indent;
+}
+
+.hit__text {
+  @include text-size(17px, 20px);
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.hit__container {
+  padding-top: 34px;
+}
+
+.hit__description {
+  margin: 0;
+  width: 249px;
+
+  @include text-size(15px, 24px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+.hit__table {
+  padding-top: $indent;
+}
+
+.hit__cell {
+  @include text-size(15px, 20px);
+  font-weight: $weight;
+  color: $greyish-brown;
+}
+
+.hit__image {
+  padding-top: 28px;
+}
+
+.hit__cost {
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+
+  @include text-size(17px, 24px);
+  color: $greyish-brown;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .hit {
+    padding: 0 $indent-tablet 53px $indent-tablet;
+  }
+
+  .hit__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hit__text {
+    width: 70px;
+    padding: 43px 27px 0 0;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .hit__container {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: $indent-tablet;
+  }
+
+  .hit__column-left {
+    width: 50%;
+  }
+
+  .hit__description {
+    width: 282px;
+
+    @include text-size(17px, 30px);
+  }
+
+  .hit__table {
+    padding-top: $indent-tablet;
+  }
+
+  .hit__column-right {
+    width: 50%;
+  }
+
+  .hit__image {
+    padding: 0;
+  }
+
+  .hit__column-bottom {
+    position: absolute;
+    bottom: 3px;
+  }
+
+  .hit__cost {
+    font-size: 20px;
+  }
+
+  .hit .hit__order {
+    width: 292px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hit {
+    padding: 32px 0 73px 0;
+    max-width: 1150px;
+  }
+
+  .hit__wrapper {
+    position: relative;
+    z-index: 3;
+
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-left: 42px;
+  }
+
+  .hit__text {
+    padding-right: 58px;
+  }
+
+  .hit__column-left {
+    box-sizing: border-box;
+
+    padding-left: 175px;
+  }
+
+  .hit__column-right {
+    margin-top: -119px;
+  }
+
+  .hit__column-bottom {
+    padding-left: 175px;
+  }
+}
