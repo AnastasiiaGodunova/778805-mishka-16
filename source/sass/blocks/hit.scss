@@ -32,6 +32,8 @@
 }
 
 .hit__image {
+  display: block;
+
   padding-top: 28px;
 }
 
@@ -97,7 +99,7 @@
 
   .hit__column-bottom {
     position: absolute;
-    bottom: 3px;
+    bottom: 0;
   }
 
   .hit__cost {

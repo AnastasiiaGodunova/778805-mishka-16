@@ -1,5 +1,5 @@
 .order {
-  padding: 0 $indent;
+  padding: 0 30px;
 }
 
 .order__fieldset {
@@ -10,15 +10,12 @@
 }
 
 .order__fieldset-name {
-  padding-top: $indent;
+  padding: 0;
+  padding-top: 30px;
 
   @include text-size(17px, 16px);
   color: $primary-color;
   text-transform: uppercase;
-
-  &--group {
-    padding-bottom: 33px;
-  }
 
   &--contacts {
     padding-bottom: 9px;
@@ -41,8 +38,8 @@
   }
 }
 
-.order__group-list {
-  @include clear-list();
+.order__label {
+  @include text-size(17px, 18px);
 }
 
 .order__input-item:not(:last-child) {
@@ -68,6 +65,9 @@
 }
 
 .order__text {
+  margin: 0;
+  padding-top: 18px;
+
   @include text-size(14px, 16px);
   font-weight: $weight;
   color: $greyish-brown;
@@ -76,4 +76,144 @@
 .order__button {
   @include text-size(17px, 16px);
   font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .order {
+    padding: 0;
+  }
+
+  .order__fieldset {
+    margin-top: 50px;
+    padding: 0 50px;
+
+    &--color {
+      padding: 50px;
+      height: 304px;
+
+      box-sizing: border-box;
+
+      background-color: $grey-back;
+    }
+
+    &--tel {
+      padding-top: 50px;
+
+      background-color: $grey-back;
+    }
+
+    &--email {
+      margin: 0;
+      padding: 24px 50px 50px 50px;
+
+      background-color: $grey-back;
+    }
+  }
+
+  .order__fieldset-wrapper {
+    display: flex;
+  }
+
+  .order__fieldset-name {
+    padding-top: 11px;
+    width: 165px;
+  }
+
+  .order__list {
+    padding-top: 11px;
+
+    &--color {
+      display: flex;flex-wrap: wrap;
+
+      width: 485px;
+    }
+
+    &--group {
+      padding-top: 0;
+    }
+  }
+
+  .order__list-item--checkbox {
+    width: 50%;
+  }
+
+  .order__label {
+    @include text-size(19px, 18px);
+  }
+
+  .order__input {
+    padding-left: 17px;
+
+    background-color: transparent;
+
+    &--group {
+      margin-left: 26px;
+    }
+
+    &--contacts {
+      width: 501px;
+    }
+  }
+
+  .order__comment {
+    margin: 0;
+    width: 501px;
+  }
+
+  .order__bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    margin: 0 50px;
+    padding-top: 50px;
+  }
+
+  .order__text {
+    padding-top: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order__fieldset {
+    padding: 0 110px;
+
+    &--color {
+      padding: 50px 110px;
+      height: 228px;
+    }
+
+    &--tel {
+      padding-top: 50px;
+    }
+
+    &--email {
+      margin: 0;
+      padding: 24px 110px 50px 110px;
+    }
+  }
+
+  .order__fieldset-name {
+    width: 115px;
+  }
+
+  .order__list--color {
+    width: 100%;
+  }
+
+  .order__list-item--checkbox {
+    width: 30%;
+  }
+
+  .order__input--contacts {
+    width: 700px;
+  }
+
+  .order__comment {
+    width: 700px;
+  }
+
+  .order__bottom {
+    margin: 0 209px 0 225px;
+  }
 }
