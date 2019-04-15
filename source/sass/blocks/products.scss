@@ -1,5 +1,5 @@
 .products {
-  padding: 0 $indent;
+  padding: 0 30px;
 }
 
 .products__list {
@@ -10,7 +10,7 @@
 }
 
 .products__item {
-  padding-top: $indent;
+  padding-top: 30px;
 
   width: 260px;
 }
@@ -20,7 +20,7 @@
 }
 
 .products__item-description {
-  padding: $indent;
+  padding: 30px;
   width: 260px;
 
   box-sizing: border-box;
@@ -50,7 +50,7 @@
 
 @media (min-width: $tablet-width) {
   .products {
-    padding: 37px $indent-tablet 0 $indent-tablet;
+    padding: 37px 50px 0 50px;
   }
 
   .products__item {
@@ -121,7 +121,7 @@
   .products__item {
     flex-direction: column;
 
-    padding-right: $indent-tablet;
+    padding-right: 50px;
     width: 316px;
     height: auto;
   }

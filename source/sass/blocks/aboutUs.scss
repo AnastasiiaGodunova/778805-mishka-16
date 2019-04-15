@@ -1,5 +1,5 @@
 .aboutUs {
-  padding: 0 $indent 27px $indent;
+  padding: 0 30px 27px 30px;
 }
 
 .aboutUs__list {
@@ -9,12 +9,12 @@
 }
 
 .aboutUs__item {
-  padding-top: $indent;
+  padding-top: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .aboutUs {
-    padding: 26px $indent-tablet 82px $indent-tablet;
+    padding: 26px 50px 82px 50px;
   }
 
   .aboutUs__list {
@@ -23,7 +23,7 @@
   }
 
   .aboutUs__item {
-    padding-top: $indent-tablet;
+    padding-top: 50px;
     width: 50%;
 
     @include text-size(20px, 22px);
@@ -45,6 +45,6 @@
 
 @media (min-width: $desktop-width) {
   .aboutUs {
-    padding: 36px $indent-tablet 89px 200px;
+    padding: 36px 50px 89px 200px;
   }
 }

@@ -1,5 +1,5 @@
 .hit {
-  padding: 0 $indent 36px $indent;
+  padding: 0 30px 36px 30px;
 }
 
 .hit__text {
@@ -22,7 +22,7 @@
 }
 
 .hit__table {
-  padding-top: $indent;
+  padding-top: 30px;
 }
 
 .hit__cell {
@@ -49,7 +49,7 @@
 
 @media (min-width: $tablet-width) {
   .hit {
-    padding: 0 $indent-tablet 53px $indent-tablet;
+    padding: 0 50px 53px 50px;
   }
 
   .hit__wrapper {
@@ -72,7 +72,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-top: $indent-tablet;
+    padding-top: 50px;
   }
 
   .hit__column-left {
@@ -86,7 +86,7 @@
   }
 
   .hit__table {
-    padding-top: $indent-tablet;
+    padding-top: 50px;
   }
 
   .hit__column-right {
