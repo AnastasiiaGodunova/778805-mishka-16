@@ -4,7 +4,6 @@
 
 .aboutUs__list {
   @include clear-list();
-
   @include text-size(17px, 20px);
 }
 
@@ -31,12 +30,15 @@
     &--flower {
       order: -4;
     }
+
     &--ball {
       order: -3;
     }
+
     &--money {
       order: -2;
     }
+
     &--rocket {
       order: -1;
     }
