@@ -1,5 +1,5 @@
 .reviews {
-  padding: 0 38px 45px $indent;
+  padding: 0 38px 45px 30px;
 }
 
 .reviews__item {
@@ -66,7 +66,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding: 0 $indent-tablet 69px $indent-tablet;
+    padding: 0 50px 69px 50px;
   }
 
   .reviews__title {

@@ -27,13 +27,19 @@
   margin-top: 38px;
 }
 
+.button.order__button {
+  margin-top: 31px;
+}
+
 @media (min-width: $tablet-width) {
   .button {
     font-size: 17px;
   }
 
   .button--video {
-    width: 584px;
+    margin-top: 40px;
+    width: 100%;
+    height: 52px;
 
     align-self: center;
   }
@@ -47,6 +53,10 @@
 
   .button.contacts__write {
     width: 230px;
+  }
+
+  .button.order__button {
+    margin-top: 0;
   }
 }
 
