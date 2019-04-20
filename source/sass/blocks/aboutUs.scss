@@ -4,25 +4,61 @@
 
 .aboutUs__list {
   @include clear-list();
+  padding-top: 16px;
+
   @include text-size(17px, 20px);
 }
 
 .aboutUs__item {
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 14px;
+
+  path {
+    fill: $primary-color;
+  }
+
+  &--flower svg {
+    padding-left: 9px;
+  }
+
+  &--money svg {
+    padding-bottom: 9px;
+  }
+
+  &--heart svg {
+    padding: 2px 0 6px 8px;
+  }
+
+  &--ball svg {
+      padding-left: 3px;
+  }
+
+  &--rocket svg {
+    margin-left: -5px;
+    padding-bottom: 11px;
+  }
+
+  &--gift svg {
+    padding: 0 0 3px 2px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .aboutUs {
-    padding: 26px 50px 82px 50px;
+    padding: 22px 50px 41px 50px;
   }
 
   .aboutUs__list {
     display: flex;
     flex-wrap: wrap;
+
+    padding-top: 35px;
   }
 
   .aboutUs__item {
-    padding-top: 50px;
+    padding-bottom: 20px;
     width: 50%;
 
     @include text-size(20px, 22px);
@@ -47,6 +83,6 @@
 
 @media (min-width: $desktop-width) {
   .aboutUs {
-    padding: 36px 50px 89px 200px;
+    padding: 30px 225px 48px 225px;
   }
 }
