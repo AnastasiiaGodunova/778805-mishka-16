@@ -58,11 +58,19 @@
     padding: 39px 50px 0 50px;
   }
 
+  .products__list {
+    padding-top: 30px;
+  }
+
   .products__item {
     display: flex;
 
+    padding-top: 0;
     width: auto;
-    height: 329px;
+
+    &:not(:last-child) {
+      padding-bottom: 54px;
+    }
   }
 
   .products__item-description {
@@ -87,7 +95,7 @@
     display: flex;
     justify-content: space-between;
 
-    padding-top: 16px;
+    padding-top: 20px;
   }
 
   .products__item-cost {

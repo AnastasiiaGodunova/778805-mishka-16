@@ -73,3 +73,10 @@
     width: auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+}

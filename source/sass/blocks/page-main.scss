@@ -19,6 +19,8 @@
 
 @media (min-width: $tablet-width) {
   .page-main__title {
+    position: relative;
+
     margin-top: -73px;
     padding: 95px 0 90px 0;
 
@@ -29,7 +31,7 @@
 
   .page-main__title::after {
     position: absolute;
-    bottom: 90px;
+    bottom: -2px;
     left: 0;
 
     content: "";
@@ -54,6 +56,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-main {
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+
   .page-main__title {
     padding-bottom: 100px;
 
@@ -61,7 +68,7 @@
   }
 
   .page-main__title::after {
-    bottom: 59px;
+    bottom: -20px;
 
     height: 34px;
 

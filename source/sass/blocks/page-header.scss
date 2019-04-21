@@ -1,6 +1,9 @@
 .page-header {
   margin: 0 auto;
 
+  position: relative;
+  z-index: 3;
+
   background-color: $white;
 }
 
@@ -145,6 +148,8 @@
 @media (min-width: $tablet-width) {
   .page-header {
     margin: 0 50px;
+
+    background-color: transparent;
   }
 
   .main-nav {
@@ -250,12 +255,17 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav {
+  .page-header {
+    margin: 0 auto;
     max-width: 1150px;
   }
 
+  .main-nav {
+    padding: 0 50px;
+  }
+
   .main-nav__top {
-    left: 450px;
+    left: 500px;
 
     padding-top: 9px;
     width: 149px;
