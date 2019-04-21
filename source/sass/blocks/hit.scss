@@ -1,5 +1,23 @@
-.hit {
-  padding: 0 30px 36px 30px;
+.hit::after {
+  content: "";
+
+  display: block;
+
+  padding: 0;
+  margin: 0;
+  height: 6px;
+
+  background-repeat: repeat no-repeat;
+  background-size: contain;
+  background-image: url("../img/bg-zigzag-line.svg");
+}
+
+.hit__wrapper {
+  padding: 0 30px;
+}
+
+.hit__title {
+  padding-bottom: 4px;
 }
 
 .hit__text {
@@ -9,7 +27,7 @@
 }
 
 .hit__container {
-  padding-top: 34px;
+  padding: 21px 30px 0 30px;
 }
 
 .hit__description {
@@ -22,13 +40,21 @@
 }
 
 .hit__table {
-  padding-top: 30px;
+  margin-top: 20px;
+  width: 100%;
+
+  border-collapse: collapse;
 }
 
 .hit__cell {
+  padding: 9px 0;
+  min-width: 81px;
+
   @include text-size(15px, 20px);
   font-weight: $weight;
   color: $greyish-brown;
+
+  border-bottom: 1px solid $grey;
 }
 
 .hit__image {
@@ -37,10 +63,14 @@
   padding-top: 28px;
 }
 
+.hit__column-bottom {
+  margin-bottom: 37px;
+}
+
 .hit__cost {
   margin: 0;
   padding: 0;
-  padding-top: 28px;
+  padding-top: 26px;
 
   @include text-size(17px, 24px);
   color: $greyish-brown;
@@ -48,18 +78,23 @@
 }
 
 @media (min-width: $tablet-width) {
-  .hit {
-    padding: 0 50px 53px 50px;
+  .hit::after {
+    height: 15px;
+
+    background-repeat: repeat no-repeat;
+    background-size: contain;
   }
 
   .hit__wrapper {
     display: flex;
     justify-content: space-between;
+
+    padding: 17px 50px 0 50px;
   }
 
   .hit__text {
     width: 70px;
-    padding: 43px 27px 0 0;
+    padding: 40px 28px 0 0;
 
     line-height: 17px;
     text-align: center;
@@ -72,7 +107,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-top: 50px;
+    padding: 45px 50px 52px 50px;
   }
 
   .hit__column-left {
@@ -86,10 +121,16 @@
   }
 
   .hit__table {
-    padding-top: 50px;
+    margin-top: 36px;
+    width: 291px;
+  }
+
+  .hit__cell {
+    min-width: 68px;
   }
 
   .hit__column-right {
+    margin-top: 8px;
     width: 50%;
   }
 
@@ -99,7 +140,7 @@
 
   .hit__column-bottom {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
   }
 
   .hit__cost {
@@ -107,14 +148,21 @@
   }
 
   .hit .hit__order {
+    margin-top: 35px;
     width: 292px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .hit {
-    padding: 32px 0 73px 0;
     max-width: 1150px;
+  }
+
+  .hit::after {
+    margin: 0 50px;
+    height: 23px;
+
+    background-position-x: 25px;
   }
 
   .hit__wrapper {
@@ -125,11 +173,15 @@
     justify-content: flex-end;
     align-items: center;
 
-    padding-left: 42px;
+    padding: 95px 50px 0 96px;
   }
 
   .hit__text {
-    padding-right: 58px;
+    padding: 32px 58px 0 0;
+  }
+
+  .hit__container {
+    padding-bottom: 75px;
   }
 
   .hit__column-left {
@@ -138,11 +190,17 @@
     padding-left: 175px;
   }
 
+  .hit__table {
+    margin-top: 49px;
+  }
+
   .hit__column-right {
-    margin-top: -119px;
+    margin-top: -158px;
   }
 
   .hit__column-bottom {
+    bottom: 38px;
+
     padding-left: 175px;
   }
 }

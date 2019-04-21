@@ -32,6 +32,14 @@
 .contacts__link {
   color: $greyish-brown;
   text-decoration-color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__address {

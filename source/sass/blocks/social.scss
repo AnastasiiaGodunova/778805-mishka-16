@@ -3,11 +3,11 @@
 
   @include clear-list();
 
-  padding-bottom: 28px;
+  padding-bottom: 10px;
 }
 
 .social__item {
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 .social__link {
@@ -18,16 +18,12 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &--instagram {
-    background-image: url("../img/icon-insta.svg");
+  &:hover path {
+    fill: #46c1ae;
   }
 
-  &--facebook {
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
+  &:active path {
+    opacity: 0.3;
   }
 }
 

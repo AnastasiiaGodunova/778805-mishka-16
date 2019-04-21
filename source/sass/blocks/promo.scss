@@ -1,3 +1,7 @@
+.promo {
+  background-color: #fafafa;
+}
+
 .promo__container {
   width: 100%;
   height: auto;
@@ -15,20 +19,22 @@
   text-align: center;
 
   margin: 0;
-  padding: 93px 39px 193px 39px;
+  padding: 72px 30px 193px 30px;
 }
 
 .promo__button-wrapper {
-  margin-top: -70px;
+  margin-top: -72px;
 }
 
 .promo__button {
+  position: relative;
+
   box-sizing: border-box;
   display: block;
 
   width: 100%;
   height: 103px;
-  padding: 30px 0 0 30px;
+  padding: 26px 0 0 30px;
 
   @include text-size(19px, 24px);
   color: $white;
@@ -36,14 +42,55 @@
 
   background-color: $primary-color;
 
+  &:hover {
+    .promo__button-icon {
+      opacity: 0.7;
+    }
+
+    background-color: #59d5bc;
+  }
+
+  &:active {
+    .promo__button-icon {
+      opacity: 0.3;
+    }
+
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--lego {
     background-color: #56c3b2;
+
+    &:hover,
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+}
+
+.promo__button-icon {
+  position: absolute;
+
+  opacity: 0.5;
+
+  path {
+    fill: #149080;
+  }
+
+  &--lamp {
+    top: 25px;
+    right: 36px;
+  }
+
+  &--lego {
+    top: 22px;
+    right: 28px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .promo {
-    margin-top: -80px;
+    margin-top: -73px;
 
     border-top: 1px solid $grey;
   }
@@ -53,35 +100,87 @@
     height: auto;
 
     background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: 50% 1%;
+    background-size: 1150px 746px;
   }
 
   .promo__title {
-    padding-top: 160px;
+    padding-top: 153px;
     padding-bottom: 470px;
 
     @include text-size(43px, 50px);
   }
 
   .promo__button-wrapper {
+    position: relative;
+
     display: flex;
 
-    margin-top: -119px;
+    margin-top: -97px;
     padding: 0 50px;
   }
 
+  .promo__button-wrapper::after {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+
+    content: "";
+
+    display: block;
+
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 24px;
+
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url("../img/bg-zigzag-fill.svg");
+  }
+
   .promo__button {
-    padding: 35px 0 0 35px;
+    padding: 28px 0 0 35px;
     width: 50%;
     height: 119px;
+
+    @include text-size(20px, 30px);
+  }
+
+  .promo__button-icon {
+    &--lamp {
+      top: 29px;
+    }
+
+    &--lego {
+      top: 31px;
+      right: 34px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .promo {
+    margin-top: -73px;
+  }
+
   .promo__container {
     background-image: url("../img/hero-desktop@1x.jpg");
   }
 
   .promo__title {
     @include text-size(53px, 57px);
+  }
+
+  .promo__button-wrapper {
+    margin-top: -110px;
+  }
+
+  .promo__button-wrapper::after {
+    bottom: -20px;
+
+    height: 37px;
+
+    background-position-x: 75px;
   }
 }
