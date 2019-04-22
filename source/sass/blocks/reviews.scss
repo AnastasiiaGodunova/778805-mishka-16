@@ -1,10 +1,24 @@
-.reviews {
-  padding: 0 38px 45px 30px;
+.reviews::after {
+  content: "";
+
+  display: block;
+
+  padding: 0;
+  margin: 0;
+  height: 6px;
+
+  background-repeat: repeat no-repeat;
+  background-size: contain;
+  background-image: url("../img/bg-zigzag-line.svg");
+}
+
+.reviews__wrapper {
+  padding: 0 30px;
 }
 
 .reviews__item {
   margin: 0;
-  padding-top: 35px;
+  padding-top: 22px;
 }
 
 .reviews__text {
@@ -17,7 +31,7 @@
 .reviews__author {
   display: block;
 
-  padding-top: 40px;
+  padding-top: 29px;
 
   @include text-size(17px, 24px);
   font-style: normal;
@@ -33,7 +47,7 @@
   display: flex;
   justify-content: space-around;
 
-  padding-top: 49px;
+  padding-top: 31px;
 }
 
 .reviews__button {
@@ -70,11 +84,23 @@
   .reviews {
     position: relative;
 
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .reviews::after {
+    height: 15px;
+
+    background-repeat: repeat no-repeat;
+    background-size: contain;
+  }
+
+  .reviews__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding: 0 50px 69px 50px;
+    padding: 32px 50px 119px 50px;
   }
 
   .reviews__title {
@@ -82,17 +108,22 @@
   }
 
   .reviews__item {
-    width: 642px;
+    padding-top: 0;
+    width: 645px;
   }
 
   .reviews__text {
     font-size: 17px;
   }
 
+  .reviews__author {
+    padding-top: 58px;
+  }
+
   .reviews__button-wrapper {
     position: absolute;
-    right: 52px;
-    bottom: 70px;
+    right: 53px;
+    bottom: 133px;
   }
 
   .reviews__button {
@@ -104,15 +135,32 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
-    padding-bottom: 67px;
+    margin: 0 50px;
+    height: 457px;
   }
 
-  .reviews__title {
-    padding-left: 175px;
+  .reviews::after {
+    height: 23px;
+
+    background-position-x: 25px;
+  }
+
+  .reviews__wrapper {
+    padding: 25px 0 0 175px;
   }
 
   .reviews__item {
-    padding: 53px 0 0 175px;
-    width: 760px;
+    padding-bottom: 165px;
+    width: 770px;
+  }
+
+  .reviews__author {
+    padding-top: 40px;
+  }
+
+  .reviews__button-wrapper {
+    position: absolute;
+    right: 3px;
+    bottom: 98px;
   }
 }

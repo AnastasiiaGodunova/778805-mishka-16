@@ -1,10 +1,11 @@
-.contacts__wrapper {
+.contacts__wrapper,
+.contacts__wrapper-button {
   padding: 0 30px;
 }
 
 .contacts__title {
   margin: 0;
-  padding-top: 44px;
+  padding-top: 37px;
 
   @include text-size(18px);
 }
@@ -12,26 +13,27 @@
 .contacts__list {
   @include clear-list();
 
-  padding-top: 42px;
+  padding-top: 26px;
 }
 
 .contacts__item {
   display: flex;
 
-  padding-bottom: 13px;
-
   @include text-size(15px);
   font-weight: $weight;
   color: $greyish-brown;
+
+  &:not(:last-child) {
+    padding-bottom: 30px;
+  }
 }
 
 .contacts__name {
-  padding-right: 32px;
+  padding-right: 30px;
 }
 
 .contacts__link {
   color: $greyish-brown;
-  text-decoration-color: $primary-color;
 
   &:hover {
     color: $primary-color;
@@ -46,26 +48,22 @@
   font-style: normal;
 }
 
-.contacts__map-image {
-  padding-top: 29px;
-}
-
-.contacts__write {
-  margin-top: 39px;
+.contacts__map {
+  padding-top: 37px;
 }
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
     padding: 0 90px 0 50px;
+  }
 
-    &--button {
-      display: flex;
-      justify-content: center;
-    }
+  .contacts__wrapper-button {
+    display: flex;
+    justify-content: center;
   }
 
   .contacts__title {
-    padding-top: 72px;
+    padding-top: 62px;
 
     @include text-size(43px, 50px);
   }
@@ -74,15 +72,23 @@
     display: flex;
     justify-content: space-between;
 
-    padding-top: 65px;
+    padding-top: 49px;
   }
 
   .contacts__item {
-    padding: 0;
+    @include text-size(17px);
+
+    &:not(:last-child) {
+      padding-bottom: 59px;
+    }
   }
 
   .contacts__name {
-    padding-right: 26px;
+    padding-right: 22px;
+  }
+
+  .contacts__map {
+    padding-top: 56px;
   }
 }
 
@@ -93,7 +99,15 @@
     display: flex;
     flex-direction: column;
 
+    margin-bottom: 104px;
+    padding-top: 129px;
     padding-left: 175px;
+  }
+
+  .contacts__title {
+    padding-top: 102px;
+
+    @include text-size(53px, 57px);
   }
 
   .contacts__list {
@@ -102,19 +116,21 @@
     padding-bottom: 32px;
   }
 
-  .contacts__item {
-    padding-bottom: 13px;
+  .contacts__item:not(:last-child) {
+    padding-bottom: 30px;
   }
 
   .contacts__map {
     position: absolute;
-    right: 30px;
-    bottom: 0;
+    right: 51px;
+    bottom: -4px;
 
     width: 525px;
   }
 
-  .contacts__wrapper--button {
+  .contacts__wrapper-button {
     justify-content: flex-start;
+
+    padding: 0 50px;
   }
 }

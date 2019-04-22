@@ -15,6 +15,10 @@
   @include text-size(13px, 24px);
   font-weight: $weight;
   color: $greyish-brown;
+
+  &--form {
+    padding-top: 23px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -52,6 +56,10 @@
     padding: 68px 50px 0 50px;
 
     @include text-size(17px, 30px);
+
+    &--form {
+      padding-top: 62px;
+    }
   }
 }
 
@@ -77,5 +85,9 @@
 
   .page-main__text {
     padding: 112px 225px 14px 225px;
+
+    &--form {
+      padding-top: 124px;
+    }
   }
 }
