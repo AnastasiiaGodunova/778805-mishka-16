@@ -26,11 +26,25 @@
 }
 
 .video__player {
+  position: relative;
+
   padding-top: 25px;
 
   img {
     display: block;
   }
+}
+
+.video__play {
+  position: absolute;
+  top: 61px;
+  left: 78px;
+  z-index: 2;
+
+  width: 101px;
+  height: 77px;
+
+  background-image: url("../img/icon-play.svg");
 }
 
 .video__wrapper {
@@ -68,6 +82,11 @@
     order: -1;
 
     padding: 0;
+  }
+
+  .video__play {
+    top: 189px;
+    left: 283px;
   }
 
   .video__wrapper {
@@ -109,6 +128,10 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .video__play {
+    left: 290px;
   }
 
   .video__wrapper {
