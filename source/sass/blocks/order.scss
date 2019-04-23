@@ -1,5 +1,5 @@
 .order {
-  padding: 0 30px;
+  padding: 0 30px 16px 30px;
 }
 
 .order__fieldset {
@@ -7,25 +7,75 @@
   padding: 0;
 
   border: none;
+
+  &--color {
+    padding-top: 20px;
+  }
 }
 
 .order__fieldset-name {
+  position: relative;
+
   padding: 0;
-  padding-top: 30px;
+  padding-top: 23px;
 
   @include text-size(17px, 16px);
   color: $primary-color;
   text-transform: uppercase;
 
+  &::after {
+    content: " ";
+
+    position: absolute;
+    top: 30px;
+    left: 62px;
+
+    width: 198px;
+    height: 1px;
+
+    background-color: $primary-color;
+  }
+
+  &--group {
+    padding-top: 40px;
+
+    &::after {
+      top: 48px;
+    }
+  }
+
   &--contacts {
+    padding-top: 31px;
     padding-bottom: 9px;
+
+    &::after {
+      top: 40px;
+    }
+  }
+
+  &--email::after {
+    left: 80px;
+
+    width: 179px;
+  }
+
+  &--comment {
+    padding-top: 33px;
+
+    &::after {
+      top: 40px;
+    }
   }
 }
 
 .order__list {
   @include clear-list();
 
-  padding-top: 35px;
+  padding-top: 34px;
+
+  &--group {
+    padding-top: 28px;
+  }
 }
 
 .order__list-item {
@@ -34,26 +84,68 @@
   }
 
   &--checkbox:not(:last-child) {
-    padding-bottom: 46px;
+    padding-bottom: 39px;
   }
 }
 
 .order__label {
+  position: relative;
+
   @include text-size(17px, 18px);
+
+  input[type="radio"] + .radio-indicator,
+  input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    width: 35px;
+    height: 35px;
+
+    border: 2px solid $greyish-brown;
+
+    cursor: pointer;
+  }
+
+  input[type="radio"] + .radio-indicator {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    padding-left: 62px;
+  }
+}
+
+.order__label-text {
+  margin: 0;
+  padding-left: 62px;
+  width: 155px;
 }
 
 .order__input-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .order__input {
   box-sizing: border-box;
 
   width: 260px;
-  height: 52px;
+  height: 50px;
 
   border: none;
   border-bottom: 2px solid $black;
+
+  @include placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
+
+  &--tel {
+    @include placeholder {
+      @include text-size(19px, 18px);
+    }
+  }
 }
 
 .order__comment {
@@ -62,11 +154,19 @@
   margin-top: 23px;
   padding: 17px;
   width: 260px;
+
+  border: 2px solid $greyish-brown;
+
+  @include placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
 }
 
 .order__text {
   margin: 0;
-  padding-top: 18px;
+  padding-top: 8px;
 
   @include text-size(14px, 16px);
   font-weight: $weight;
@@ -88,8 +188,8 @@
     padding: 0 50px;
 
     &--color {
-      padding: 50px;
-      height: 304px;
+      margin-top: 69px;
+      padding: 45px 25px 14px 50px;
 
       box-sizing: border-box;
 
@@ -104,7 +204,7 @@
 
     &--email {
       margin: 0;
-      padding: 24px 50px 50px 50px;
+      padding: 24px 50px 48px 50px;
 
       background-color: $grey-back;
     }
@@ -115,31 +215,90 @@
   }
 
   .order__fieldset-name {
-    padding-top: 11px;
     width: 165px;
+
+    &--group {
+      padding-top: 18px;
+    }
+
+    &--contacts {
+      padding-top: 17px;
+      padding-bottom: 20px;
+    }
+
+    &--comment {
+      padding-top: 17px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .order__list {
-    padding-top: 11px;
+    padding-top: 22px;
 
     &--color {
       display: flex;
       flex-wrap: wrap;
 
-      width: 485px;
+      padding-top: 20px;
+      width: 525px;
     }
 
     &--group {
-      padding-top: 0;
+      width: 100%;
+      padding-top: 2px;
     }
   }
 
-  .order__list-item--checkbox {
-    width: 50%;
+  .order__list-item {
+    &--radio:not(:last-child) {
+      padding-bottom: 58px;
+    }
+
+    &--checkbox {
+      width: 50%;
+
+      &:not(:last-child) {
+        padding-bottom: 53px;
+      }
+    }
   }
 
   .order__label {
     @include text-size(19px, 18px);
+
+    input[type="radio"] + .radio-indicator {
+      top: -14px;
+
+      width: 49px;
+      height: 47px;
+    }
+
+    input[type="checkbox"] + .checkbox-indicator {
+      top: -12px;
+      left: 1px;
+
+      width: 50px;
+      height: 49px;
+    }
+
+    &--checkbox {
+      padding-left: 82px;
+    }
+
+    &--group {
+      display: flex;
+      align-items: center;
+
+      padding-left: 35px;
+    }
+  }
+
+  .order__label-text {
+    padding-left: 83px;
+    width: 100%;
   }
 
   .order__input {
@@ -148,17 +307,32 @@
     background-color: transparent;
 
     &--group {
+      flex-grow: 1;
+
       margin-left: 26px;
     }
 
-    &--contacts {
+    &--tel,
+    &--email {
       width: 501px;
     }
+
+    @include placeholder {
+      @include text-size(19px, 18px);
+    }
+  }
+
+  .order__input-item:not(:last-child) {
+    margin-bottom: 26px;
   }
 
   .order__comment {
     margin: 0;
     width: 501px;
+
+    @include placeholder {
+      @include text-size(19px, 18px);
+    }
   }
 
   .order__bottom {
@@ -171,7 +345,9 @@
   }
 
   .order__text {
-    padding-top: 14px;
+    padding-top: 6px;
+
+    @include text-size(17px);
   }
 }
 
@@ -180,34 +356,67 @@
     padding: 0 110px;
 
     &--color {
-      padding: 50px 110px;
+      padding: 55px 50px 50px 110px;
       height: 228px;
     }
 
+    &--group {
+      padding-right: 225px;
+    }
+
     &--tel {
-      padding-top: 50px;
+      padding-top: 53px;
     }
 
     &--email {
       margin: 0;
-      padding: 24px 110px 50px 110px;
+      padding: 24px 110px 47px 110px;
     }
   }
 
   .order__fieldset-name {
+    padding-top: 10px;
     width: 115px;
+
+    &--color {
+      width: 130px;
+    }
+
+    &--group {
+      padding-top: 17px;
+      width: 90px;
+    }
+
+    &--contacts {
+      padding-top: 16px;
+    }
+
+    &--comment {
+      padding-top: 18px;
+    }
   }
 
-  .order__list--color {
-    width: 100%;
+  .order__list {
+    padding-top: 8px;
+
+    &--color {
+      width: 100%;
+    }
+
+    &--group {
+      padding-top: 0;
+    }
   }
 
   .order__list-item--checkbox {
     width: 30%;
   }
 
-  .order__input--contacts {
-    width: 700px;
+  .order__input {
+    &--tel,
+    &--email {
+      width: 700px;
+    }
   }
 
   .order__comment {
@@ -215,6 +424,7 @@
   }
 
   .order__bottom {
-    margin: 0 209px 0 225px;
+    margin: 0 225px;
+    padding-top: 48px;
   }
 }
