@@ -114,6 +114,13 @@
   &--checkbox {
     padding-left: 62px;
   }
+
+  &:hover {
+    input[type="radio"] + .radio-indicator,
+    input[type="checkbox"] + .checkbox-indicator {
+      border-color: $primary-color;
+    }
+  }
 }
 
 .order__label-text {
@@ -132,6 +139,8 @@
   width: 260px;
   height: 50px;
 
+  color: $greyish-brown;
+
   border: none;
   border-bottom: 2px solid $black;
 
@@ -139,6 +148,13 @@
     @include text-size(17px, 18px);
     color: $greyish-brown;
     opacity: 0.3;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: 2px solid $primary-color;
+
+    outline: none;
   }
 
   &--tel {
@@ -155,12 +171,21 @@
   padding: 17px;
   width: 260px;
 
+  color: $greyish-brown;
+
   border: 2px solid $greyish-brown;
 
   @include placeholder {
     @include text-size(17px, 18px);
     color: $greyish-brown;
     opacity: 0.3;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $primary-color;
+
+    outline: none;
   }
 }
 
