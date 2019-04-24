@@ -6,6 +6,10 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <title>Мишка</title>
   </head>
   <body>
@@ -121,6 +125,25 @@
             <a class="hit__order button" href="#">Заказать</a>
           </div>
         </div>
+      </section>
+      <section class="modal modal__order">
+        <h2 class="modal__order-title">Добавить в корзину</h2>
+        <p class="modal__order-text">Выберите размер:</p>
+        <form class="modal__order-form" action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <input type="checkbox" name="small" id="small-checkbox" value="small-size" class="visually-hidden modal__order-input" checked>
+            <label for="small-checkbox" class="modal__order-label modal__order-label--s">s</label>
+          </div>
+          <div>
+            <input type="checkbox" name="medium" id="medium-checkbox" value="medium-size" class="visually-hidden modal__order-input">
+            <label for="medium-checkbox" class="modal__order-label modal__order-label--m">m</label>
+          </div>
+          <div>
+            <input type="checkbox" name="large" id="large-checkbox" value="large-size" class="visually-hidden modal__order-input">
+            <label for="large-checkbox" class="modal__order-label modal__order-label--l">l</label>
+          </div>
+          <button class="button modal__button" type="submit">Добавить</button>
+        </form>
       </section>
       <section class="aboutUs">
         <h2 class="aboutUs__title title">Коротко о нас:</h2>
