@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .promo__title {
@@ -102,6 +106,10 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 1%;
     background-size: 1150px 746px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   .promo__title {
