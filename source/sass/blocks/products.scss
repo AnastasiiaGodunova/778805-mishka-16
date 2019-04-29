@@ -28,10 +28,25 @@
 
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+
+    .products__item-title {
+      opacity: 0.6;
+    }
+
+    svg {
+      fill: $primary-color;
+
+      opacity: 1;
+    }
   }
 
   &:active {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+    .products__item-title,
+    svg {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -52,9 +67,25 @@
 }
 
 .products__item-buy {
+  display: flex;
+  justify-content: space-between;
+
   padding-top: 19px;
 
   border-top: 1px solid $grey;
+}
+
+.products__item-link {
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  svg {
+    fill: #231f20;
+
+    opacity: 0.2;
+  }
 }
 
 .products__item-cost {
@@ -100,31 +131,11 @@
   }
 
   .products__item-buy {
-    display: flex;
-    justify-content: space-between;
-
     padding-top: 20px;
   }
 
   .products__item-cost {
     font-size: 17px;
-  }
-
-  .products__item-link {
-    margin: 0;
-    padding: 0;
-    width: 21px;
-    height: 18px;
-
-    background-color: transparent;
-    background-image: url("../img/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: 50% 50%;
-    border: none;
-    opacity: 0.2;
-
-    cursor: pointer;
   }
 }
 
