@@ -23,7 +23,11 @@
 
   border-top: 1px solid $grey;
 
-  &:hover path {
+  svg {
+    fill: $primary-color;
+  }
+
+  &:hover svg {
     fill: #46c1ae;
   }
 
@@ -37,12 +41,6 @@
 
   @include text-size(19px, 18px);
   color: $black;
-}
-
-.copyright__image {
-  path {
-    fill: $primary-color;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -61,11 +59,11 @@
 
     padding-right: 80px;
 
-    &:hover path {
+    &:hover svg {
       fill: #46c1ae;
     }
 
-    &:active path {
+    &:active svg {
       opacity: 0.3;
     }
   }
