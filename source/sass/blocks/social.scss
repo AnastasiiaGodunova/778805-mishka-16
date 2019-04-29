@@ -18,11 +18,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &:hover path {
+  &:hover svg {
     fill: #46c1ae;
   }
 
-  &:active path {
+  &:active svg {
     opacity: 0.3;
   }
 }

@@ -74,14 +74,24 @@
 
   box-shadow: 0 1px 0 0 $grey, inset 0 1px 0 0 $grey;
 
+  &--search-icon,
+  &--basket-icon {
+    position: absolute;
+    left: 32px;
+
+    fill: #231F20;
+
+    opacity: 0.2;
+  }
+
   &:hover {
-    .main-nav__link--text {
+    .main-nav__link-text {
       opacity: 0.6;
     }
   }
 
   &:active {
-    .main-nav__link--text {
+    .main-nav__link-text {
       opacity: 0.3;
     }
   }
@@ -92,33 +102,19 @@
 
     &:hover {
       svg {
-        opacity: 1;
+        fill: $primary-color;
 
-        path {
-          fill: $primary-color;
-        }
+        opacity: 1;
       }
     }
 
     &:active {
       svg {
-        opacity: 0.3;
+        fill: $primary-color;
 
-        path {
-          fill: $primary-color;
-        }
+        opacity: 0.3;
       }
     }
-  }
-
-  &--search-icon,
-  &--basket-icon {
-    position: absolute;
-    left: 32px;
-
-    height: 18px;
-
-    opacity: 0.2;
   }
 }
 
@@ -236,14 +232,12 @@
     }
   }
 
-  .main-nav__link {
-    &--text-search {
-      display: none;
-    }
+  .main-nav__link--site-nav {
+    @include text-size(15px, 24px);
+  }
 
-    &--site-nav {
-      @include text-size(15px, 24px);
-    }
+  .main-nav__link-text--search {
+    display: none;
   }
 
   .main-nav__text {

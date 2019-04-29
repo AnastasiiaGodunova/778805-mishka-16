@@ -48,6 +48,8 @@
 
   &:hover {
     .promo__button-icon {
+      fill: #231F20;
+
       opacity: 0.7;
     }
 
@@ -77,9 +79,7 @@
 
   opacity: 0.5;
 
-  path {
-    fill: #149080;
-  }
+  fill: #149080;
 
   &--lamp {
     top: 25px;

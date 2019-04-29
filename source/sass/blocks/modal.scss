@@ -5,7 +5,7 @@
   height: 336px;
 
   border: 1px solid #c6c6c6;
-  box-shadow: 0px 5px 10px 0 rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 }
 
 .modal__order-title {
@@ -69,8 +69,8 @@
   margin-bottom: 10px;
   padding: 18px 0;
 
-  font-weight: 700;
   @include text-size(17px, 16px);
+  font-weight: 700;
   color: white;
 
   background-color: $primary-color;
@@ -79,19 +79,47 @@
 
 @media (min-width: $tablet-width) {
   .modal__order {
-    width: 566px;
+    margin: 0 auto;
+    padding: 32px 50px;
+
+    width: 554px;
+
+    box-sizing: border-box;
   }
+
+  .modal__order-wrapper {
+    padding-left: 56px;
+  }
+
   .modal__order-title {
+    padding: 0 0 0 6px;
     width: 100%;
 
     @include text-size(30px, 57px);
   }
 
   .modal__order-text {
+    padding: 12px 0 9px 150px;
+
     @include text-size(17px);
   }
-}
 
-@media (min-width: $desktop-width) {
+  .modal__order-label {
+    &--s {
+      padding: 13px 48px;
+    }
 
+    &--m {
+      padding: 13px 44px;
+    }
+
+    &--l {
+      padding: 13px 48px;
+    }
+  }
+
+  .modal__button {
+    margin-left: 55px;
+    width: 350px;
+  }
 }

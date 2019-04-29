@@ -3,6 +3,14 @@
   margin-bottom: 58px;
 
   border: 1px solid $grey;
+
+  &:hover {
+    box-shadow: 0px 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .video__title-wrapper {
@@ -12,7 +20,7 @@
 
   padding: 22px 39px 0 33px;
 
-  path {
+  svg {
     fill: $primary-color;
   }
 }
@@ -45,6 +53,16 @@
   height: 77px;
 
   background-image: url("../img/icon-play.svg");
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transform: scale(0.8);
+  }
 }
 
 .video__wrapper {
