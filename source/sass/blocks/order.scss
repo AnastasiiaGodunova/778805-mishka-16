@@ -200,7 +200,7 @@
   }
 
   &:hover,
-  &:active {
+  &:focus {
     border-bottom: 2px solid $primary-color;
 
     outline: none;
@@ -211,6 +211,10 @@
       @include text-size(19px, 18px);
     }
   }
+}
+
+.order__input-icon {
+  display: none;
 }
 
 .order__comment {
@@ -231,7 +235,7 @@
   }
 
   &:hover,
-  &:active {
+  &:focus {
     border-color: $primary-color;
 
     outline: none;
@@ -285,6 +289,8 @@
   }
 
   .order__fieldset-wrapper {
+    position: relative;
+
     display: flex;
   }
 
@@ -398,7 +404,7 @@
   }
 
   .order__input {
-    padding-left: 17px;
+    padding: 0 60px 0 17px;
 
     background-color: transparent;
 
@@ -418,8 +424,30 @@
     }
   }
 
+  .order__input:hover + .order__input-icon,
+  .order__input:focus + .order__input-icon {
+    fill: $primary-color;
+
+    opacity: 1;
+  }
+
   .order__input-item:not(:last-child) {
     margin-bottom: 26px;
+  }
+
+  .order__input-icon {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+
+    display: block;
+
+    opacity: 0.2;
+
+    &--tel {
+      top: 11px;
+      right: 26px;
+    }
   }
 
   .order__comment {
@@ -518,6 +546,15 @@
     &--tel,
     &--email {
       width: 700px;
+    }
+  }
+
+  .order__input-icon {
+    top: 9px;
+    right: 120px;
+
+    &--tel {
+      right: 123px;
     }
   }
 
