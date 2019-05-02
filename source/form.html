@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async=""></script>
     <title>Мишка</title>
   </head>
   <body>
@@ -40,7 +40,7 @@
             <li class="main-nav__item main-nav__item--search">
               <a href="#" class="main-nav__link main-nav__link--search">
                 <svg class="main-nav__item--search-icon" width="18" height="18">
-                  <use xlink:href="img/sprite.svg#search">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
                 </svg>
                 <span class="main-nav__link-text main-nav__link-text--search">Поиск по сайту</span>
               </a>
@@ -48,7 +48,7 @@
             <li class="main-nav__item main-nav__item--basket">
               <a href="#" class="main-nav__link main-nav__link--basket">
                 <svg class="main-nav__item--basket-icon" width="21" height="18">
-                  <use xlink:href="img/sprite.svg#basket">
+                  <use xlink:href="img/sprite/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="main-nav__link-text">Корзина: пока пуста</span>
               </a>
@@ -78,7 +78,7 @@
               <ul class="order__list">
                 <li class="order__list-item order__list-item--radio">
                   <label class="order__label">
-                    <input class="visually-hidden" type="radio" name="type" checked>
+                    <input class="visually-hidden" type="radio" name="type" checked="">
                     <span class="radio-indicator"></span>
                     <p class="order__label-text">Аксессуар для интерьера</p>
                   </label>
@@ -99,14 +99,14 @@
               <ul class="order__list order__list--color">
                 <li class="order__list-item order__list-item--checkbox">
                   <label class="order__label order__label--checkbox">
-                    <input class="visually-hidden" type="checkbox" name="color" checked>
+                    <input class="visually-hidden" type="checkbox" name="color" checked="">
                     <span class="checkbox-indicator"></span>
                     Белый
                   </label>
                 </li>
                 <li class="order__list-item order__list-item--checkbox">
                   <label class="order__label order__label--checkbox">
-                    <input class="visually-hidden" type="checkbox" name="color" checked>
+                    <input class="visually-hidden" type="checkbox" name="color" checked="">
                     <span class="checkbox-indicator"></span>
                     Серый
                   </label>
@@ -148,12 +148,12 @@
               <ul class="order__list order__list--group">
                 <li class="order__input-item">
                   <label class="order__label order__label--group">Имя:
-                    <input class="order__input order__input--group" type="text" name="name" placeholder="Введите ваше имя*" required>
+                    <input class="order__input order__input--group" type="text" name="name" placeholder="Введите ваше имя*" required="">
                   </label>
                 </li>
                 <li class="order__input-item">
                   <label class="order__label order__label--group">Фамилия:
-                    <input class="order__input order__input--group" type="text" name="surname" placeholder="Укажите фимилию*" required>
+                    <input class="order__input order__input--group" type="text" name="surname" placeholder="Укажите фимилию*" required="">
                   </label>
                 </li>
                 <li class="order__input-item">
@@ -167,18 +167,18 @@
           <fieldset class="order__fieldset order__fieldset--tel">
             <div class="order__fieldset-wrapper">
               <legend class="order__fieldset-name order__fieldset-name--contacts">ТЕЛ</legend>
-              <input class="order__input order__input--tel" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
+              <input class="order__input order__input--tel" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required="">
               <svg class="order__input-icon order__input-icon--tel" width="25" height="24">
-                <use xlink:href="img/sprite.svg#phone">
+                <use xlink:href="img/sprite/sprite.svg#icon-phone"></use>
               </svg>
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--email">
             <div class="order__fieldset-wrapper">
               <legend class="order__fieldset-name order__fieldset-name--contacts order__fieldset-name--email">E-Mail</legend>
-              <input class="order__input order__input--email" type="email" name="email" placeholder="Ваш Email*" required>
+              <input class="order__input order__input--email" type="email" name="email" placeholder="Ваш Email*" required="">
               <svg class="order__input-icon order__input-icon--mail" width="32" height="32">
-                <use xlink:href="img/sprite.svg#mail">
+                <use xlink:href="img/sprite/sprite.svg#icon-mail"></use>
               </svg>
             </div>
           </fieldset>
@@ -198,7 +198,7 @@
     <footer class="page-footer">
       <a class="page-footer__logo">
         <svg width="101.615px" height="34.056px">
-          <use xlink:href="img/sprite.svg#footer__logo">
+          <use xlink:href="img/sprite/sprite.svg#icon-logo-footer"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
@@ -206,21 +206,21 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span>
               <svg width="21.769px" height="21.334px">
-                <use xlink:href="img/sprite.svg#instagram">
+                <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
               <svg width="14.962px" height="27.718px">
-                <use xlink:href="img/sprite.svg#facebook">
+                <use xlink:href="img/sprite/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span>
               <svg width="23.494px" height="20.168px">
-                <use xlink:href="img/sprite.svg#twitter">
+                <use xlink:href="img/sprite/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -229,7 +229,7 @@
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">Разработано</b>
         <svg width="26.943px" height="34.09px">
-          <use xlink:href="img/sprite.svg#copyright__logo">
+          <use xlink:href="img/sprite/sprite.svg#icon-logo-htmlacademy"></use>
         </svg>
       </a>
     </footer>
