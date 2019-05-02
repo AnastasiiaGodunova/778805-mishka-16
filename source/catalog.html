@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async=""></script>
     <title>Мишка</title>
   </head>
   <body>
@@ -40,7 +40,7 @@
             <li class="main-nav__item main-nav__item--search">
               <a href="#" class="main-nav__link main-nav__link--search">
                 <svg class="main-nav__item--search-icon" width="18" height="18">
-                  <use xlink:href="img/sprite.svg#search">
+                  <use xlink:href="img/sprite/sprite.svg#icon-search"></use>
                 </svg>
                 <span class="main-nav__link-text main-nav__link-text--search">Поиск по сайту</span>
               </a>
@@ -48,7 +48,7 @@
             <li class="main-nav__item main-nav__item--basket">
               <a href="#" class="main-nav__link main-nav__link--basket">
                 <svg class="main-nav__item--basket-icon" width="21" height="18">
-                  <use xlink:href="img/sprite.svg#basket">
+                  <use xlink:href="img/sprite/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="main-nav__link-text">Корзина: пока пуста</span>
               </a>
@@ -91,7 +91,7 @@
                 <span class="products__item-cost">1 200 руб.</span>
                 <a class="products__item-link" href="#">
                   <svg width="21" height="18">
-                    <use xlink:href="img/sprite.svg#basket">
+                    <use xlink:href="img/sprite/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Купить</span>
                 </a>
@@ -119,7 +119,7 @@
                 <span class="products__item-cost">690 руб.</span>
                 <a class="products__item-link" href="#">
                   <svg width="21" height="18">
-                    <use xlink:href="img/sprite.svg#basket">
+                    <use xlink:href="img/sprite/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Купить</span>
                 </a>
@@ -147,7 +147,7 @@
                 <span class="products__item-cost">1 500 руб.</span>
                 <a class="products__item-link" href="#">
                   <svg width="21" height="18">
-                    <use xlink:href="img/sprite.svg#basket">
+                    <use xlink:href="img/sprite/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="visually-hidden">Купить</span>
                 </a>
@@ -159,7 +159,7 @@
       <section class="video">
         <div class="video__title-wrapper">
           <svg width="32px" height="32px">
-            <use xlink:href="img/sprite.svg#video">
+            <use xlink:href="img/sprite/sprite.svg#icon-video"></use>
           </svg>
           <h2 class="video__title">Процесс производства</h2>
         </div>
@@ -186,7 +186,7 @@
         <form class="modal__order-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal__order-wrapper">
             <div>
-              <input type="radio" name="size" id="small" value="small-size" class="visually-hidden modal__order-input" checked>
+              <input type="radio" name="size" id="small" value="small-size" class="visually-hidden modal__order-input" checked="">
               <label for="small" class="modal__order-label modal__order-label--s">s</label>
             </div>
             <div>
@@ -205,7 +205,7 @@
     <footer class="page-footer">
       <a class="page-footer__logo">
         <svg width="101.615px" height="34.056px">
-          <use xlink:href="img/sprite.svg#footer__logo">
+          <use xlink:href="img/sprite/sprite.svg#icon-logo-footer"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
@@ -213,21 +213,21 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в Инстаграме</span>
               <svg width="21.769px" height="21.334px">
-                <use xlink:href="img/sprite.svg#instagram">
+                <use xlink:href="img/sprite/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
               <svg width="14.962px" height="27.718px">
-                <use xlink:href="img/sprite.svg#facebook">
+                <use xlink:href="img/sprite/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span>
               <svg width="23.494px" height="20.168px">
-                <use xlink:href="img/sprite.svg#twitter">
+                <use xlink:href="img/sprite/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -236,7 +236,7 @@
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">Разработано</b>
         <svg width="26.943px" height="34.09px">
-          <use xlink:href="img/sprite.svg#copyright__logo">
+          <use xlink:href="img/sprite/sprite.svg#icon-logo-htmlacademy"></use>
         </svg>
       </a>
     </footer>
