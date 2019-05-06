@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="fonts/opensans.woff2" as="font">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <script>
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.min.js" async=""></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <title>Мишка</title>
   </head>
   <body>
@@ -23,9 +25,9 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </picture>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
-        <div class="main-nav__bottom">
+        <div class="main-nav__bottom main-nav__bottom--nojs">
         <ul class="main-nav__list main-nav__list--site-nav">
             <li class="main-nav__item">
               <a href="catalog.html" class="main-nav__link main-nav__link--site-nav">
@@ -113,16 +115,15 @@
           </div>
           <picture class="hit__column-right">
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
-
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Товар недели">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+            <img class="hit__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Товар недели">
           </picture>
           <div class="hit__column-bottom">
             <p class="hit__cost">Цена: 990 руб.</p>
-            <a class="hit__order button" href="#">Заказать</a>
+            <a class="hit__order button button--js" href="#">Заказать</a>
           </div>
         </div>
       </section>
@@ -147,40 +148,40 @@
           <button class="button modal__button" type="submit">Добавить</button>
         </form>
       </section>
-      <section class="aboutUs">
-        <h2 class="aboutUs__title title">Коротко о нас:</h2>
-        <ul class="aboutUs__list">
-          <li class="aboutUs__item aboutUs__item--flower">
+      <section class="about-us">
+        <h2 class="about-us__title title">Коротко о нас:</h2>
+        <ul class="about-us__list">
+          <li class="about-us__item about-us__item--flower">
             <svg width="31.972px" height="37.301px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-flower"></use>
             </svg>
             <p>Экологически <br>чистые материалы</p>
           </li>
-          <li class="aboutUs__item aboutUs__item--money">
+          <li class="about-us__item about-us__item--money">
             <svg width="46.575px" height="27.332px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-money"></use>
             </svg>
             <p>Скандинавский стиль <br>по российской цене</p>
           </li>
-          <li class="aboutUs__item aboutUs__item--heart">
+          <li class="about-us__item about-us__item--heart">
             <svg width="33.05px" height="27.857px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-heart"></use>
             </svg>
             <p>Увеличивает лайки <br>на фотографиях</p>
           </li>
-          <li class="aboutUs__item aboutUs__item--ball">
+          <li class="about-us__item about-us__item--ball">
             <svg width="34.373px" height="34.373px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-ball"></use>
             </svg>
             <p>Связано вручную с <br>любовью и умилением</p>
           </li>
-          <li class="aboutUs__item aboutUs__item--rocket">
+          <li class="about-us__item about-us__item--rocket">
             <svg width="54.156px" height="23.183px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-rocket"></use>
             </svg>
             <p>Поддержка отечественного <br>производителя</p>
           </li>
-          <li class="aboutUs__item aboutUs__item--gift">
+          <li class="about-us__item about-us__item--gift">
             <svg width="32.666px" height="32.486px">
               <use xlink:href="img/sprite/sprite.svg#icon-feature-gift"></use>
             </svg>
@@ -217,6 +218,7 @@
           </ul>
         </div>
         <div class="contacts__map">
+          <div class="contacts__map-api" id="map"></div>
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -272,6 +274,7 @@
       </a>
     </footer>
     <div class="overlay"></div>
+    <script src="js/script.min.js"></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
   </body>

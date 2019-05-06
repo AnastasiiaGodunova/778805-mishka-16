@@ -193,12 +193,6 @@
   border: none;
   border-bottom: 2px solid $black;
 
-  @include placeholder {
-    @include text-size(17px, 18px);
-    color: $greyish-brown;
-    opacity: 0.3;
-  }
-
   &:hover,
   &:focus {
     border-bottom: 2px solid $primary-color;
@@ -212,6 +206,31 @@
     }
   }
 }
+
+&::-webkit-input-placeholder {
+  @include text-size(17px, 18px);
+  color: $greyish-brown;
+  opacity: 0.3;
+}
+
+&:-moz-placeholder {
+  @include text-size(17px, 18px);
+  color: $greyish-brown;
+  opacity: 0.3;
+}
+
+&::-moz-placeholder {
+  @include text-size(17px, 18px);
+  color: $greyish-brown;
+  opacity: 0.3;
+}
+
+&:-ms-input-placeholder {
+  @include text-size(17px, 18px);
+  color: $greyish-brown;
+  opacity: 0.3;
+}
+
 
 .order__input-icon {
   display: none;
@@ -227,12 +246,6 @@
   color: $greyish-brown;
 
   border: 2px solid $greyish-brown;
-
-  @include placeholder {
-    @include text-size(17px, 18px);
-    color: $greyish-brown;
-    opacity: 0.3;
-  }
 
   &:hover,
   &:focus {
@@ -438,7 +451,7 @@
   .order__input-icon {
     position: absolute;
     top: 10px;
-    right: 22px;
+    left: 614px;
 
     display: block;
 
@@ -446,7 +459,7 @@
 
     &--tel {
       top: 11px;
-      right: 26px;
+      left: 617px;
     }
   }
 
@@ -551,10 +564,10 @@
 
   .order__input-icon {
     top: 9px;
-    right: 120px;
+    left: 779px;
 
     &--tel {
-      right: 123px;
+      left: 782px;
     }
   }
 
