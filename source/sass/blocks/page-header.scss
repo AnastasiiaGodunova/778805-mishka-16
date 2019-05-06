@@ -47,16 +47,45 @@
   height: 25px;
 
   background-color: transparent;
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 50% 50%;
+
   border: none;
 
   cursor: pointer;
 
-  &--close {
-    background-image: url("../img/icon-menu-close.svg");
+  &--open::before {
+    content: "";
+
+    position: absolute;
+    top: 32px;
+    right: 30px;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $black;
+    box-shadow: 0 6px 0 0 $black, 0 12px 0 0 $black;
+  }
+
+  &--close::before,
+  &--close::after {
+    content: "";
+
+    position: absolute;
+    top: 37px;
+    right: 30px;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &--close::before {
+    transform: rotate(45deg);
+  }
+
+  &--close::after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -135,8 +164,16 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .main-nav__toggle--nojs {
+    display: none;
+  }
+
   .main-nav__bottom {
     display: none;
+
+    &--nojs {
+      display: block;
+    }
   }
 }
 

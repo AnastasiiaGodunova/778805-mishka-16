@@ -1,15 +1,15 @@
-.aboutUs {
+.about-us {
   padding: 0 30px 10px 30px;
 }
 
-.aboutUs__list {
+.about-us__list {
   @include clear-list();
   padding-top: 16px;
 
   @include text-size(17px, 20px);
 }
 
-.aboutUs__item {
+.about-us__item {
   display: flex;
   flex-direction: column;
 
@@ -46,18 +46,18 @@
 }
 
 @media (min-width: $tablet-width) {
-  .aboutUs {
+  .about-us {
     padding: 5px 50px 41px 50px;
   }
 
-  .aboutUs__list {
+  .about-us__list {
     display: flex;
     flex-wrap: wrap;
 
     padding-top: 35px;
   }
 
-  .aboutUs__item {
+  .about-us__item {
     padding-bottom: 20px;
     width: 50%;
 
@@ -82,7 +82,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .aboutUs {
+  .about-us {
     padding: 13px 225px 48px 225px;
   }
 }

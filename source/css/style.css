@@ -82,14 +82,32 @@ a {
   width: 25px;
   height: 25px;
   background-color: transparent;
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 50% 50%;
   border: none;
   cursor: pointer; }
-  .main-nav__toggle--close {
-    background-image: url("../img/icon-menu-close.svg"); }
+  .main-nav__toggle--open::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    -webkit-box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+            box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000; }
+  .main-nav__toggle--close::before, .main-nav__toggle--close::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: 30px;
+    width: 20px;
+    height: 2px;
+    background-color: #000000; }
+  .main-nav__toggle--close::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .main-nav__toggle--close::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
 
 .main-nav__list {
   list-style: none;
@@ -136,8 +154,12 @@ a {
   color: #444444; }
 
 @media (max-width: 767px) {
+  .main-nav__toggle--nojs {
+    display: none; }
   .main-nav__bottom {
-    display: none; } }
+    display: none; }
+    .main-nav__bottom--nojs {
+      display: block; } }
 
 @media (min-width: 768px) {
   .page-header {
@@ -544,14 +566,19 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 45px 50px 52px 50px; }
+    padding: 45px 50px 17px 50px; }
   .hit__column-left {
-    width: 50%; }
+    width: 50%;
+    min-height: 275px; }
   .hit__description {
     width: 282px;
     font-size: 17px;
@@ -562,14 +589,17 @@ a {
   .hit__cell {
     min-width: 68px; }
   .hit__column-right {
-    margin-top: 8px;
-    width: 50%; }
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    margin-top: 8px; }
   .hit__image {
     padding: 0; }
   .hit__column-bottom {
-    position: absolute;
-    bottom: 15px; }
+    width: 50%; }
   .hit__cost {
+    padding-left: 60px;
+    width: 50%;
     font-size: 20px; }
   .hit .hit__order {
     margin-top: 35px;
@@ -599,18 +629,20 @@ a {
   .hit__text {
     padding: 50px 58px 0 0; }
   .hit__container {
-    padding-bottom: 75px; }
+    padding-bottom: 38px; }
   .hit__column-left {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    min-height: 340px;
     padding-left: 175px; }
   .hit__table {
     margin-top: 49px; }
   .hit__column-right {
     margin-top: -158px; }
   .hit__column-bottom {
-    bottom: 38px;
-    padding-left: 175px; } }
+    padding-left: 175px; }
+  .hit__cost {
+    padding-left: 15px; } }
 
 .title {
   margin: 0;
@@ -699,10 +731,10 @@ a {
     margin-top: 46px;
     width: 230px; } }
 
-.aboutUs {
+.about-us {
   padding: 0 30px 10px 30px; }
 
-.aboutUs__list {
+.about-us__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -710,7 +742,7 @@ a {
   font-size: 17px;
   line-height: 20px; }
 
-.aboutUs__item {
+.about-us__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,56 +751,56 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 14px; }
-  .aboutUs__item svg {
+  .about-us__item svg {
     fill: #63d1bb; }
-  .aboutUs__item--flower svg {
+  .about-us__item--flower svg {
     padding-left: 9px; }
-  .aboutUs__item--money svg {
+  .about-us__item--money svg {
     padding-bottom: 9px; }
-  .aboutUs__item--heart svg {
+  .about-us__item--heart svg {
     padding: 2px 0 6px 8px; }
-  .aboutUs__item--ball svg {
+  .about-us__item--ball svg {
     padding-left: 3px; }
-  .aboutUs__item--rocket svg {
+  .about-us__item--rocket svg {
     margin-left: -5px;
     padding-bottom: 11px; }
-  .aboutUs__item--gift svg {
+  .about-us__item--gift svg {
     padding: 0 0 3px 2px; }
 
 @media (min-width: 768px) {
-  .aboutUs {
+  .about-us {
     padding: 5px 50px 41px 50px; }
-  .aboutUs__list {
+  .about-us__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-top: 35px; }
-  .aboutUs__item {
+  .about-us__item {
     padding-bottom: 20px;
     width: 50%;
     font-size: 20px;
     line-height: 22px; }
-    .aboutUs__item--flower {
+    .about-us__item--flower {
       -webkit-box-ordinal-group: -3;
           -ms-flex-order: -4;
               order: -4; }
-    .aboutUs__item--ball {
+    .about-us__item--ball {
       -webkit-box-ordinal-group: -2;
           -ms-flex-order: -3;
               order: -3; }
-    .aboutUs__item--money {
+    .about-us__item--money {
       -webkit-box-ordinal-group: -1;
           -ms-flex-order: -2;
               order: -2; }
-    .aboutUs__item--rocket {
+    .about-us__item--rocket {
       -webkit-box-ordinal-group: 0;
           -ms-flex-order: -1;
               order: -1; } }
 
 @media (min-width: 1150px) {
-  .aboutUs {
+  .about-us {
     padding: 13px 225px 48px 225px; } }
 
 .reviews::after {
@@ -820,7 +852,7 @@ a {
   width: 130px;
   height: 52px;
   background-color: transparent;
-  background-image: url("../img/icon-right-arrow.svg");
+  background-image: url("../img/right-arrow.svg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 50% 50%;
@@ -943,6 +975,13 @@ a {
   position: relative;
   padding-top: 39px; }
 
+.contacts__map-api {
+  position: absolute;
+  width: 100%;
+  height: 457px;
+  background-color: transparent;
+  z-index: 3; }
+
 .map-pin {
   position: absolute;
   top: 182px;
@@ -950,7 +989,7 @@ a {
   z-index: 2;
   width: 67px;
   height: 100px;
-  background-image: url("../img/icon-map-pin.svg"); }
+  background-image: url("../img/map-pin.svg"); }
 
 @media (min-width: 768px) {
   .contacts__wrapper {
@@ -1306,7 +1345,8 @@ a {
     left: 290px; }
   .video__wrapper {
     margin-left: 682px;
-    padding: 34px 57px 60px 78px; } }
+    padding: 34px 57px 60px 78px;
+    min-height: 219px; } }
 
 .order {
   padding: 0 30px 16px 30px; }
@@ -1640,12 +1680,12 @@ a {
   .order__input-icon {
     position: absolute;
     top: 10px;
-    right: 22px;
+    left: 614px;
     display: block;
     opacity: 0.2; }
     .order__input-icon--tel {
       top: 11px;
-      right: 26px; }
+      left: 617px; }
   .order__comment {
     margin: 0;
     width: 501px; }
@@ -1718,9 +1758,9 @@ a {
     width: 700px; }
   .order__input-icon {
     top: 9px;
-    right: 120px; }
+    left: 779px; }
     .order__input-icon--tel {
-      right: 123px; }
+      left: 782px; }
   .order__comment {
     width: 700px; }
   .order__bottom {
