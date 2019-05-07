@@ -82,8 +82,6 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    position: relative;
-
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
 
@@ -101,6 +99,8 @@
   }
 
   .reviews__wrapper {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -128,7 +128,7 @@
   .reviews__button-wrapper {
     position: absolute;
     right: 53px;
-    bottom: 133px;
+    bottom: 118px;
   }
 
   .reviews__button {
@@ -166,6 +166,6 @@
   .reviews__button-wrapper {
     position: absolute;
     right: 3px;
-    bottom: 98px;
+    bottom: 164px;
   }
 }

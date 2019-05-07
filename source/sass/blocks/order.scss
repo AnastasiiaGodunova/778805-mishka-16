@@ -193,6 +193,30 @@
   border: none;
   border-bottom: 2px solid $black;
 
+  &::-webkit-input-placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
+
+  &:-moz-placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
+
+  &::-moz-placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
+
+  &:-ms-input-placeholder {
+    @include text-size(17px, 18px);
+    color: $greyish-brown;
+    opacity: 0.3;
+  }
+
   &:hover,
   &:focus {
     border-bottom: 2px solid $primary-color;
@@ -201,34 +225,22 @@
   }
 
   &--tel {
-    @include placeholder {
+    &::-webkit-input-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &::-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-ms-input-placeholder {
       @include text-size(19px, 18px);
     }
   }
-}
-
-&::-webkit-input-placeholder {
-  @include text-size(17px, 18px);
-  color: $greyish-brown;
-  opacity: 0.3;
-}
-
-&:-moz-placeholder {
-  @include text-size(17px, 18px);
-  color: $greyish-brown;
-  opacity: 0.3;
-}
-
-&::-moz-placeholder {
-  @include text-size(17px, 18px);
-  color: $greyish-brown;
-  opacity: 0.3;
-}
-
-&:-ms-input-placeholder {
-  @include text-size(17px, 18px);
-  color: $greyish-brown;
-  opacity: 0.3;
 }
 
 
@@ -427,13 +439,25 @@
       margin-left: 26px;
     }
 
+    &::-webkit-input-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &::-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-ms-input-placeholder {
+      @include text-size(19px, 18px);
+    }
+
     &--tel,
     &--email {
       width: 501px;
-    }
-
-    @include placeholder {
-      @include text-size(19px, 18px);
     }
   }
 
@@ -467,7 +491,19 @@
     margin: 0;
     width: 501px;
 
-    @include placeholder {
+    &::-webkit-input-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &::-moz-placeholder {
+      @include text-size(19px, 18px);
+    }
+
+    &:-ms-input-placeholder {
       @include text-size(19px, 18px);
     }
   }

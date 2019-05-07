@@ -24,9 +24,9 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </picture>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
-        <div class="main-nav__bottom">
+        <div class="main-nav__bottom main-nav__bottom--nojs">
         <ul class="main-nav__list main-nav__list--site-nav">
             <li class="main-nav__item">
               <a class="main-nav__link  main-nav__link--site-nav">Каталог товаров</a>
@@ -70,6 +70,7 @@
     <main class="page-main">
       <h1 class="page-main__title">Каталог товаров</h1>
       <section class="products">
+        <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="products__list">
           <li class="products__item">
             <a href="#">
@@ -243,7 +244,7 @@
     </footer>
     <div class="overlay"></div>
     <script src="js/script.min.js"></script>
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>
 </html>

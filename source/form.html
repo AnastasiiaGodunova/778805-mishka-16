@@ -24,9 +24,9 @@
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </picture>
           </a>
-          <button class="main-nav__toggle main-nav__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
-        <div class="main-nav__bottom">
+        <div class="main-nav__bottom main-nav__bottom--nojs">
         <ul class="main-nav__list main-nav__list--site-nav">
             <li class="main-nav__item">
               <a href="catalog.html" class="main-nav__link  main-nav__link--site-nav">
@@ -75,20 +75,20 @@
         <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="order__fieldset">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name">Тип</legend>
+              <span class="order__fieldset-name">Тип</span>
               <ul class="order__list">
                 <li class="order__list-item order__list-item--radio">
                   <label class="order__label">
                     <input class="visually-hidden" type="radio" name="type" checked="">
                     <span class="radio-indicator"></span>
-                    <p class="order__label-text">Аксессуар для интерьера</p>
+                    <span class="order__label-text">Аксессуар для интерьера</span>
                   </label>
                 </li>
                 <li class="order__list-item order__list-item--radio">
                   <label class="order__label">
                     <input class="visually-hidden" type="radio" name="type">
                     <span class="radio-indicator"></span>
-                    <p class="order__label-text">Детская игрушка</p>
+                    <span class="order__label-text">Детская игрушка</span>
                   </label>
                 </li>
               </ul>
@@ -96,7 +96,7 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--color">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name order__fieldset-name--color">Цвет</legend>
+              <span class="order__fieldset-name order__fieldset-name--color">Цвет</span>
               <ul class="order__list order__list--color">
                 <li class="order__list-item order__list-item--checkbox">
                   <label class="order__label order__label--checkbox">
@@ -145,7 +145,7 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--group">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name order__fieldset-name--group">ФИО</legend>
+              <span class="order__fieldset-name order__fieldset-name--group">ФИО</span>
               <ul class="order__list order__list--group">
                 <li class="order__input-item">
                   <label class="order__label order__label--group">Имя:
@@ -167,7 +167,7 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--tel">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name order__fieldset-name--contacts">ТЕЛ</legend>
+              <span class="order__fieldset-name order__fieldset-name--contacts">ТЕЛ</span>
               <input class="order__input order__input--tel" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required="">
               <svg class="order__input-icon order__input-icon--tel" width="25" height="24">
                 <use xlink:href="img/sprite/sprite.svg#icon-phone"></use>
@@ -176,7 +176,7 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--email">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name order__fieldset-name--contacts order__fieldset-name--email">E-Mail</legend>
+              <span class="order__fieldset-name order__fieldset-name--contacts order__fieldset-name--email">E-Mail</span>
               <input class="order__input order__input--email" type="email" name="email" placeholder="Ваш Email*" required="">
               <svg class="order__input-icon order__input-icon--mail" width="32" height="32">
                 <use xlink:href="img/sprite/sprite.svg#icon-mail"></use>
@@ -185,7 +185,7 @@
           </fieldset>
           <fieldset class="order__fieldset">
             <div class="order__fieldset-wrapper">
-              <legend class="order__fieldset-name order__fieldset-name--comment">Доп</legend>
+              <span class="order__fieldset-name order__fieldset-name--comment">Доп</span>
               <textarea class="order__comment" name="comment" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
@@ -235,7 +235,7 @@
       </a>
     </footer>
     <script src="js/script.min.js"></script>
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
   </body>
 </html>

@@ -18,15 +18,14 @@
   justify-content: center;
   align-items: center;
 
-  padding-top: 6px;
+  padding-top: 5px;
   width: 100%;
 
   box-shadow: 0 1px 0 0 $grey, inset 0 1px 0 0 $grey;
 }
 
 .page-header__logo {
-  margin-left: 24px;
-  padding: 16px 67px;
+  padding: 17px 67px;
 }
 
 .page-header__logo[href] .page-header__logo-image {
@@ -40,8 +39,7 @@
 }
 
 .main-nav__toggle {
-  margin: 0;
-  margin-top: -7px;
+  margin: -7px -24px 0 0;
   padding: 0;
   width: 25px;
   height: 25px;

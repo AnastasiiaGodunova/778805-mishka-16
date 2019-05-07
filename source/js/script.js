@@ -5,14 +5,6 @@ var navToggle = document.querySelector(".main-nav__toggle");
 var navMain = document.querySelector(".main-nav__bottom");
 var products = document.querySelector(".products__item");
 
-var catalog = function (products) {
-  var elements = document.querySelectorAll('.products__item-link');
-  for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-    element.classList.add('button--js');
-  }
-}
-
 navMain.classList.remove("main-nav__bottom--nojs");
 navToggle.classList.remove("main-nav__toggle--nojs");
 
