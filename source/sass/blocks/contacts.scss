@@ -146,9 +146,12 @@
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 104px;
+    margin: 0 auto 104px auto;
     padding-top: 129px;
     padding-left: 175px;
+    max-width: 1150px;
+
+    box-sizing: border-box;
   }
 
   .contacts__title {

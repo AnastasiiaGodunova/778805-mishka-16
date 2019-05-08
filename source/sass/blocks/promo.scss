@@ -96,9 +96,30 @@
 
 @media (min-width: $tablet-width) {
   .promo {
+    position: relative;
+
     margin-top: -73px;
 
     border-top: 1px solid $grey;
+  }
+
+  .promo::after {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+
+    content: "";
+
+    display: block;
+
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 24px;
+
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url("../img/bg-zigzag-fill.svg");
   }
 
   .promo__container {
@@ -130,29 +151,10 @@
     padding: 0 50px;
   }
 
-  .promo__button-wrapper::after {
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-
-    content: "";
-
-    display: block;
-
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 24px;
-
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-image: url("../img/bg-zigzag-fill.svg");
-  }
-
   .promo__button {
     padding: 28px 0 0 35px;
     width: 50%;
-    height: 119px;
+    min-height: 119px;
 
     @include text-size(20px, 30px);
   }
@@ -170,8 +172,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo {
-    margin-top: -73px;
+  .promo::after {
+    bottom: -17px;
+
+    height: 37px;
+
+    background-position: 50% 50%;
+    background-size: 1250px 100%;
   }
 
   .promo__container {
@@ -182,15 +189,14 @@
     @include text-size(53px, 57px);
   }
 
-  .promo__button-wrapper {
-    margin-top: -110px;
+  .promo__button:hover {
+    top: -5px;
   }
 
-  .promo__button-wrapper::after {
-    bottom: -20px;
+  .promo__button-wrapper {
+    margin: -110px auto 0 auto;
+    max-width: 1150px;
 
-    height: 37px;
-
-    background-position-x: 75px;
+    box-sizing: border-box;
   }
 }

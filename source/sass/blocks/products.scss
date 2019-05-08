@@ -141,17 +141,20 @@
 
 @media (min-width: $desktop-width) {
   .products {
+    margin: 0 auto;
     padding-top: 101px;
+    max-width: 1150px;
   }
 
   .products__list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .products__item {
     flex-direction: column;
 
-    padding-right: 50px;
+    padding: 0;
     width: 316px;
     height: auto;
   }

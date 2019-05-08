@@ -10,6 +10,8 @@
   background-repeat: repeat no-repeat;
   background-size: contain;
   background-image: url("../img/bg-zigzag-line.svg");
+
+  transform: rotate(180deg);
 }
 
 .hit__wrapper {
@@ -81,8 +83,7 @@
   .hit::after {
     height: 15px;
 
-    background-repeat: repeat no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 
   .hit__wrapper {
@@ -162,6 +163,7 @@
 
 @media (min-width: $desktop-width) {
   .hit {
+    margin: 0 auto;
     max-width: 1150px;
   }
 
@@ -170,6 +172,8 @@
     height: 23px;
 
     background-position-x: 25px;
+
+    transform: none;
   }
 
   .hit__wrapper {

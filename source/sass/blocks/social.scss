@@ -31,4 +31,8 @@
   .social__list {
     padding-top: 25px;
   }
+
+  .social__item:not(:nth-child(2)) {
+    padding-top: 7px;
+  }
 }

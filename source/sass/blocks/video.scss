@@ -1,4 +1,4 @@
-.video {
+.video__container {
   margin: 30px;
   margin-bottom: 58px;
 
@@ -78,7 +78,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .video {
+  .video__container {
     display: flex;
     flex-direction: column;
 
@@ -118,13 +118,17 @@
 
 @media (min-width: $desktop-width) {
   .video {
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+
+  .video__container {
     position: relative;
 
     flex-direction: row;
     flex-wrap: wrap;
 
-    margin-top: 3px;
-    margin-bottom: 104px;
+    margin: 3px 50px 104px 50px;
     padding: 0;
   }
 

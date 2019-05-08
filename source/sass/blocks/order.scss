@@ -4,12 +4,16 @@
 
 .order__fieldset {
   margin: 0;
-  padding: 0;
+  padding: 23px 0 0 0;
 
   border: none;
 
   &--color {
-    padding-top: 20px;
+    padding-top: 43px;
+  }
+
+  &--group {
+    padding-top: 42px;
   }
 }
 
@@ -27,7 +31,7 @@
     content: " ";
 
     position: absolute;
-    top: 30px;
+    top: 34px;
     left: 62px;
 
     width: 198px;
@@ -45,11 +49,13 @@
   }
 
   &--contacts {
-    padding-top: 31px;
+    display: block;
+
+    padding-top: 9px;
     padding-bottom: 9px;
 
     &::after {
-      top: 40px;
+      top: 18px;
     }
   }
 
@@ -60,10 +66,12 @@
   }
 
   &--comment {
-    padding-top: 33px;
+    display: block;
+
+    padding-top: 11px;
 
     &::after {
-      top: 40px;
+      top: 18px;
     }
   }
 }
@@ -84,7 +92,7 @@
   }
 
   &--checkbox:not(:last-child) {
-    padding-bottom: 39px;
+    padding-bottom: 43px;
   }
 }
 
@@ -173,13 +181,15 @@
 }
 
 .order__label-text {
+  display: block;
+
   margin: 0;
   padding-left: 62px;
   width: 155px;
 }
 
 .order__input-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .order__input {
@@ -243,7 +253,6 @@
   }
 }
 
-
 .order__input-icon {
   display: none;
 }
@@ -252,7 +261,7 @@
   box-sizing: border-box;
 
   margin-top: 23px;
-  padding: 17px;
+  padding: 15px 17px;
   width: 260px;
 
   color: $greyish-brown;
@@ -269,7 +278,7 @@
 
 .order__text {
   margin: 0;
-  padding-top: 8px;
+  padding-top: 15px;
 
   @include text-size(14px, 16px);
   font-weight: $weight;
@@ -292,7 +301,7 @@
 
     &--color {
       margin-top: 69px;
-      padding: 45px 25px 14px 50px;
+      padding: 45px 25px 10px 50px;
 
       box-sizing: border-box;
 
@@ -300,7 +309,7 @@
     }
 
     &--tel {
-      padding-top: 50px;
+      padding-top: 53px;
 
       background-color: $grey-back;
     }
@@ -366,7 +375,7 @@
       width: 50%;
 
       &:not(:last-child) {
-        padding-bottom: 53px;
+        padding-bottom: 56px;
       }
     }
   }
@@ -513,7 +522,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
 
-    margin: 0 50px;
+    margin: 0 50px -5px 50px;
     padding-top: 50px;
   }
 
@@ -526,15 +535,11 @@
 
 @media (min-width: $desktop-width) {
   .order__fieldset {
-    padding: 0 110px;
+    padding: 0;
 
     &--color {
-      padding: 55px 50px 50px 110px;
+      padding: 55px 0 50px 0;
       height: 228px;
-    }
-
-    &--group {
-      padding-right: 225px;
     }
 
     &--tel {
@@ -543,7 +548,23 @@
 
     &--email {
       margin: 0;
-      padding: 24px 110px 47px 110px;
+      padding: 24px 0 47px 0;
+    }
+  }
+
+  .order__fieldset-wrapper {
+    margin: 0 auto;
+    padding: 0 0 0 110px;
+    max-width: 1150px;
+
+    box-sizing: border-box;
+
+    &--color {
+      padding-right: 110px;
+    }
+
+    &--group {
+      padding-right: 225px;
     }
   }
 
@@ -582,7 +603,13 @@
   }
 
   .order__list-item--checkbox {
-    width: 30%;
+    margin-right: -7px;
+    padding-bottom: 56px;
+    width: 33%;
+  }
+
+  .order__list-item--checkbox:not(:last-child) {
+    padding-bottom: 56px;
   }
 
   .order__label {
@@ -599,11 +626,11 @@
   }
 
   .order__input-icon {
-    top: 9px;
-    left: 779px;
+    top: 8px;
+    left: 888px;
 
     &--tel {
-      left: 782px;
+      left: 892px;
     }
   }
 
@@ -612,7 +639,14 @@
   }
 
   .order__bottom {
-    margin: 0 225px;
-    padding-top: 48px;
+    margin: 0 auto;
+    padding: 48px 225px 0 225px;
+    max-width: 1150px;
+
+    box-sizing: border-box;
+  }
+
+  .order__text {
+    padding-top: 13px;
   }
 }
